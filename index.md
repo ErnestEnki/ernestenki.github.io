@@ -2,6 +2,14 @@
 title: Home
 ---
 
+<style>
+img {
+    border: 3px solid black;
+    margin-bottom: 15px;
+}
+</style>
+<base target="_blank" />
+
 # About me
 Ernest Enki is a pen name to safeguard my privacy and to allow the books and content to be judged solely on its content, independent of the author's background or unorthodox Education.
 
