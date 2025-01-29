@@ -3,7 +3,6 @@ body {
   text-align: justify;
   font-size: 18px;
 
-
   --sb-track-color: #042d41;
   --sb-thumb-color: #62d0cf;
   --sb-size: 10px;
@@ -46,7 +45,6 @@ main img {
   background-color: white;
 }
 
-
 blockquote {
   font-weight: bolder;
   text-transform: uppercase;
@@ -88,5 +86,13 @@ ul#toc-list ul {
 @supports not selector(::-webkit-scrollbar) {
   body {
     scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+      position: relative; /* Prevents interference */
+      max-height: none; /* Allows natural scroll */
+      overflow-y: visible; /* Avoids trapping the touch scroll */
   }
 }
