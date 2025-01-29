@@ -12,11 +12,11 @@ img {
 }
 </style>
 
-# Books
+# Books That Ernest Enki Has Authored
 
 | Book |   |
 | :------------ | :------------ |
-| <img src="/books/patent_dystopia/images/cover.jpg" />  | **Patent Dystopia**: How the Patent System Strangled Innovation, Job Creation, and the Economy <br/> [Read the official summary here](/books/patent_dystopia/summary.html)  |
+| [<img src="/books/patent_dystopia/images/cover.jpg" />](https://www.amazon.com/dp/B0DKNT5YHT)  | [Patent Dystopia](https://www.amazon.com/dp/B0DKNT5YHT): How the Patent System Strangled Innovation, Job Creation, and the Economy <br/> [Read the official summary here](/books/patent_dystopia/summary.html)  |
 
 
 # Social Media
