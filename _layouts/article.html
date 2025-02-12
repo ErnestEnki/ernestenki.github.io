@@ -1,0 +1,24 @@
+---
+layout: default
+extra_head: <link href="article.css" rel="stylesheet" />
+---
+<header class="sticky-header shadow-sm d-flex align-items-center justify-content-between">
+  <a href="/" class="text-decoration-none fw-bold ms-3">
+    <i class="fa fa-home"></i> Home
+  </a>
+
+    <div class="text-center flex-grow-1">
+      <h1 class="mb-1">{{ page.title }}</h1>
+      <p class="small mb-0">{{ page.description }}</p>
+    </div>    
+    
+  </header>
+  
+  {{ content }}
+    
+  <footer>          
+    <a href="https://www.amazon.com/dp/B0DKNT5YHT" target="_blank"><img src="../books/patent_dystopia/images/cover.jpg" /></a>
+    You might enjoy my book <a href="https://www.amazon.com/dp/B0DKNT5YHT" target="_blank"><strong>Patent Dystopia</strong></a><br/>
+    How the Patent System Strangled Innovation, Job Creation, and the Economy. <br/>
+    <a href="/books/patent_dystopia/summary.html">Read the official summary here</a>
+  </footer>

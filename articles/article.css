@@ -9,14 +9,17 @@
   a {
     color: white;
   }
+
+  p {
+    color: white;
+  }  
 }
 
 @media not print {
-
   main,
   footer {
-    padding: 30px 3vh 0 3vh;
-    
+    padding: 0 3vh;
+
     h1,
     h2,
     h3 {
@@ -54,9 +57,15 @@ math {
 
 div:has(> math) {
   background-color: #e1e5e849;
-  text-align: center;
   border: 1px solid lightgray;
+  text-align: center;  
   margin-bottom: 15px;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.2), black, rgba(0, 0, 0, 0.2));
 }
 
 table.trading-report {
@@ -88,4 +97,35 @@ table.trading-report {
       font-weight: bolder;
     }
   }
+}
+
+.list-of-points article {
+  margin-bottom: 30px;
+  background-color: rgba(230, 230, 230, 0.1);
+  border: 1px solid rgba(100, 100, 100, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+
+  h1, h2, h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight:300;    
+  }
+
+  > * {
+    margin-left: 20px;
+  }
+
+  ul {
+    margin: 0;
+  }
+}
+
+.fa-thumbs-up {
+  color: darkgreen;
+}
+
+.fa-thumbs-up.down {
+  color: darkred;
+  transform: scale(1, -1);
 }

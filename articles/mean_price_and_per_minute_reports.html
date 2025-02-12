@@ -1,0 +1,574 @@
+---
+layout: article
+title: Mean Price and Per-Minute reporting
+description: Overreliance on Last Price distorts resource allocation, fuels investor overreactions, heightens volatility, and increases market manipulation risks. <br/> Mean Price offers greater transparency, sophistication, flexibility, composability, and resistance to manipulation.
+---
+<main>
+
+  <p>
+  <address class="d-inline"><a href="https://x.com/ErnestEnki" target="_blank">By Ernest Enki</a></address> |
+  Published on <time datetime="2025-02-04">04/Feb/2025</time> |
+  <a href="#" data-bs-toggle="modal" data-bs-target="#readerExpModal"><i class="fa fa-gear"></i> Customize reader
+    experience</a> | ~<span id="readingTime"></span> min read
+  </p>
+
+  <hr />
+
+  <article>
+    <p>Assets such as stocks, ETFs, indexes, options, derivatives, commodities, currencies, cryptocurrencies and their tokens, bonds, fixed-income securities, and Real Estate Investment Trusts (REITs) are almost always evaluated based on their Last Price. This approach is seen everywhere: in news reports, academic papers, financial systems, laws, and regulations. Most financial market graphs show only the last price for an interval. Yet we rarely ask whether the Last Price is the best measure for every situation. Could relying on it lead to misleading conclusions when it is applied to the wrong problems?</p>
+
+    <p>Consider a simple example: a stock trades steadily at 100 dollars throughout the day, with a total volume of one billion shares. Then, in the very last trade of the day, just one thousand shares exchange hands at 40 dollars. Market reports would claim a 60 percent drop (from 100 to 40), even though this final trade was unrepresentative of the broader market activity, and overall, the market had barely moved.</p>
+
+    <p>Using the Last Price as the "representative" market measure in all situations can lead to several problems:</p>
+
+    <div class="list-of-points">
+      <article>
+        <h2>Last Price Overuse Causes Investor Overreactions</h2>
+        <ul>
+          <li>
+            <b>Amplifies Short-Term Noise:</b>
+            <p>Many investors, especially retail traders, react emotionally to price movements. Treating short-term
+              fluctuations as if they are meaningful trends can trigger impulsive decisions. <br />
+              <b>Example:</b> A stock closes at 100 dollars, then a single investor buys just one share at 105
+              dollars. This minor purchase can suggest a sudden “5 percent increase,” even though there was almost no
+              volume supporting it.
+            </p>
+          </li>
+          <li>
+            <b>Misleading After-Hours Price Gaps:</b>
+            <p>During after-market and pre-market hours, trading volume is usually low, so small trades can create
+              large shifts. <br />
+              <b>Example:</b> A stock that closes at 50 dollars might see a final after-hours trade at 40 dollars.
+              With so few shares trading hands, the plunge is not truly representative of the market’s view, yet it
+              might alarm investors.
+            </p>
+          </li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Last Price is an Unstable Foundation</h2>
+        <p>The Last Price is an unstable basis for important
+        <ul>
+          <li><b>market processes</b> such as margin calls, limit orders,
+            stop-loss orders, valuations of funds, Net Asset Value (NAV) calculations, earnings reports and year-end
+            financial reports.</li>
+          <li><b>legal processes</b> such as taxes, laws and regulations, asset separations (like a divorce or company
+            partner departure).</li>
+        </ul>
+        </p>
+
+        <p>However, since the Last Price can be volatile, manipulated, or out of sync with the broader market, it can
+          mislead investors, stakeholders, governments, and financial institutions.</p>
+        <ul>
+          <li>
+            <b>Stop-Loss Triggers from Low-Volume Trades:</b>
+            <p>A small, low-volume trade below an investor’s stop-loss threshold may trigger an unwanted sale, even
+              though the broader market still values the asset above that level.</p>
+          </li>
+          <li>
+            <b>End-of-Year Valuation Distortions:</b>
+            <p>Near fiscal year-end, a brief dip in an asset’s price can reduce a company’s or fund’s official
+              valuation. This can lead to:
+            <ul>
+              <li><b>Skewed Financial Statements:</b> Firms appear less valuable than they truly are.</li>
+              <li><b>Incorrect Taxation:</b> Investors and corporations may pay the wrong capital gains taxes.</li>
+              <li><b>Investor Misperception:</b> Funds pegged to NAV seem weaker due to last-minute pricing anomalies.
+              </li>
+            </ul>
+            </p>
+          </li>
+        </ul>
+        </p>
+      </article>
+
+      <article>
+        <h2>Last Price Overuse Increases Market Volatility</h2>
+        <ul>
+          <li>
+            <b>Self-Fulfilling Price Swings:</b>
+            <p>Because many trading tools—margin calls, limit orders, and stop-loss orders—react to the last traded
+              price, rapid shifts in that price can trigger chain reactions. <br />
+              <b>Example:</b> If a temporary drop activates countless automated sell orders, it can spark a cycle of
+              additional price drops, known as cascading liquidations.
+            </p>
+          </li>
+          <li>
+            <b>Flash Crashes and Panic Selling:</b>
+            <p>Some flash crashes happen when algorithmic trading and limit orders respond to short-lived price dips.
+              <br />
+              <b>Example:</b> In the 2010 Flash Crash, high-frequency trading and triggered stop-loss orders caused
+              the Dow Jones to lose about 9 percent in minutes before quickly recovering.
+            </p>
+          </li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Last Price Overuse Makes Markets Easy to Manipulate</h2>
+        <ul>
+          <li>
+            <b>"Painting the Tape":</b>
+            <p>A trader or institution can place several small orders at misleading prices to make an asset look
+              stronger or weaker than it is.<br />
+              <b>Example:</b> A trader who wants to boost a stock’s price before an earnings report might buy tiny
+              batches of shares at slightly higher prices to imitate strong demand.
+            </p>
+          </li>
+          <li>
+            <b>Marking the Close:</b>
+            <p>Since closing prices guide institutional valuations, some entities strategically place orders near the
+              market’s close to affect that final price.<br />
+              <b>Example:</b> A hedge fund wanting to improve quarterly returns could submit a major buy order in the
+              last seconds of trading, pushing the closing price higher to reflect better performance.
+            </p>
+          </li>
+          <li>
+            <b>Manipulating Stock Options and Derivatives:</b>
+            <p>Options often settle based on the Last Price. A trader who holds many option contracts can push
+              the final price to gain a profitable outcome.<br />
+              <b>Example:</b> An investor holding several 50-dollar call options might buy shares aggressively near
+              the close, driving the price above 50 dollars so that the calls expire in the money.
+            </p>
+          </li>
+        </ul>
+      </article>
+    </div>
+
+    <p>Unfortunately, most exchanges worldwide provide the public with free access only to the Last Price during market hours. After the market closes, they publish daily data, including the closing price, which is simply the last trade of the day. For example:</p>
+
+    <img src="img/exchanges_current_data.png" class="rounded mx-auto d-block " />
+
+    <p>In most cases, mandatory financial reporting to the public has remained unchanged for decades, despite the rise of new technologies that could provide more accurate and comprehensive data. Meanwhile, modern financial tools—such as margin calls and limit orders—have been built around these outdated metrics, often misapplying them in ways that can trigger serious market disruptions.</p>
+
+    <p>To illustrate the absurdity of this approach, imagine a business owner asking for a breakdown of customer spending habits. Instead of providing meaningful insights, an employee responds with just four numbers: how much the first customer spent, how much the last customer spent, and the highest and lowest amounts spent. This would be an incomplete and unintuitive way to analyze sales—yet this is exactly how financial markets report asset prices, relying on a few arbitrary points instead of a more sophisticated and scientifically sound representation of market activity.</p>
+
+    <h2>Solution part 1: Mean Price</h2>
+
+    <p>A more sensible default market metric for most situations is the Mean Price, where volume weighting is the only logical approach and is therefore implied. This metric, also known as the <a href="https://en.wikipedia.org/wiki/Volume-weighted_average_price"
+        target="_blank">Volume-Weighted Average Price (VWAP)</a>, is widely used in technical trading, often calculated daily but applicable to any timeframe. For simplicity, memorability, and effective communication, we will refer to VWAP simply as Mean Price.
+    </p>
+
+    <h3>Mean vs Average</h3>
+    <p>The term "average" is an informal term that can refer to various statistical measures, including the arithmetic mean (which we will be using), but also the median, mode, geometric mean, or harmonic mean. The term "mean" is more precise in statistics and is therefore preferable whenever possible to avoid confusion.</p>
+
+    <p>Although we learned how to calculate the weighted mean in
+      primary school, we seem to have forgotten to use that skill where it matters most. Let us now calculate it for the
+      earlier example involving the misrepresented asset:</p>
+
+    <div>
+      <math>
+        <mfrac>
+          <mrow>
+            <mo>(</mo>
+            <mn>$100</mn>
+            <mo>×</mo>
+            <mn>1 000 000 000</mn>
+            <mo>)</mo>
+            <mo>+</mo>
+            <mo>(</mo>
+            <mn>$40</mn>
+            <mo>×</mo>
+            <mn>1 000</mn>
+            <mo>)</mo>
+          </mrow>
+          <mrow>
+            <mn>1 000 000 000</mn>
+            <mo>+</mo>
+            <mn>1 000</mn>
+          </mrow>
+        </mfrac>
+        <mo>=</mo>
+        <mn>$99.99994 Mean Price</mn>
+      </math>
+    </div>
+
+    <p>Reporting the Mean Price (or rounding it to 100 dollars) is the most reliable default price for public reporting, charts, and analyses. It would have clearly shown that there was no crash and very little volatility.</p>
+    <p>This does not mean the Last Price is useless—it can still be relevant for immediate trades. However, a more informed approach would be to consider the Last Price alongside a short-term Mean Price, such as one calculated over the past ten minutes or one hour, for better decision-making.</p>
+
+    <p>Most stock exchanges do not provide Mean Price data to the public, either as part of free information packages or even within paid data services. As a result, many companies must calculate Mean Price independently by subscribing to premium feeds that reveal every executed trade—an often expensive process. Some financial data providers, such as Bloomberg and Refinitiv, include Mean Price as part of their premium offerings.</p>
+
+    <p>However, modern streaming (or "online") data technologies, such as <a href="https://spark.apache.org/"
+        target="_blank">the Open Source Apache Spark</a>, which many exchanges likely already use in one form or another, make it simple and cost-effective
+      to calculate Mean Price in real time as trades take place.</p>
+
+
+    <p>In essence, new financial reporting standards are needed to address modern financial risks and to take
+      advantage of new technological possibilities. Consider the following points:</p>
+
+    <ul>
+      <li>The Last Price is frequently misused by the media, the general public, goverments and financial markets, leading
+        to overreactions and market volatility.</li>
+      <li>This misuse creates opportunities for manipulation and undermines trust in markets.</li>
+      <li>Reporting requirements have not evolved, even though technology and financial tools have advanced and
+        created fresh needs and possibilities.</li>
+      <li>Providing more detailed or alternative statistics is now inexpensive and computationally straightforward.
+      </li>
+    </ul>
+
+    <p>We propose a new regulation or law requiring exchanges with all publicly traded assets to disclose Mean Price to the public at no cost, in a format easily accessible to both humans and machines.</p>
+
+    <p>Any exchange that displays Last Price—such as financial graphs, stock market web pages, and daily reports—must also display Mean Price alongside it, or let the user choose between Last Price and Mean Price.</p>
+
+    <h2>Solution part 2: Reporting by the minute</h2>
+
+    <p>In addition to adding Mean Price to current reporting, we propose a new reporting requirement for exchanges: publishing an aggregated summary per asset, similar to existing daily reports, but at <b>one-minute intervals</b>. This means that for each minute within the last two hours of trading, exchanges must update and publish this data every minute.</p>
+
+    <p>Below is an example with made-up data for a volatile asset:</p>
+
+    <table class="trading-report">
+      <colgroup>
+        <col span="6" />
+        <col span="1" style="background-color: #72e472;" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Minute</th>
+          <th>Open price <br />(first trade)</th>
+          <th>Mininum price <br />(lowest trade)</th>
+          <th>Maximum price <br />(highest trade)</th>
+          <th>Close price <br />(last trade)</th>
+          <th>Volume <br />(Σ Volume)</th>
+          <th>Mean Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2025-01-27 09:03</td>
+          <td>$92.61</td>
+          <td>$67.17</td>
+          <td>$110.63</td>
+          <td>$83.56</td>
+          <td>3,149</td>
+          <td>$89.70</td>
+        </tr>
+        <tr>
+          <td>2025-01-27 09:02</td>
+          <td>$120.10</td>
+          <td>$76.77</td>
+          <td>$106.25</td>
+          <td>$93.03</td>
+          <td>3,083</td>
+          <td>$101.00</td>
+        </tr>
+        <tr>
+          <td>2025-01-27 09:01</td>
+          <td>$119.81</td>
+          <td>$91.20</td>
+          <td>$142.74</td>
+          <td>$120.29</td>
+          <td>2,897</td>
+          <td>$92.00</td>
+        </tr>
+        <tr>
+          <td>2025-01-27 09:00</td>
+          <td>$121.57</td>
+          <td>$100.71</td>
+          <td>$145.41</td>
+          <td>$119.73</td>
+          <td>2,977</td>
+          <td>$142.93</td>
+        <tr>
+          <td>2025-01-24 16:59</td>
+          <td>$98.06</td>
+          <td>$83.91</td>
+          <td>$134.83</td>
+          <td>$89.51</td>
+          <td>2,878</td>
+          <td>$84.02</td>
+        </tr>
+        <tr>
+          <td>2025-01-24 16:58</td>
+          <td>$93.87</td>
+          <td>$90.91</td>
+          <td>$95.55</td>
+          <td>$98.51</td>
+          <td>3,005</td>
+          <td>$95.10</td>
+        </tr>
+        <tr>
+          <td colspan="7">... and so on, 114 more times, to account for each minute of the 2h sliding window.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>1: This data reflects the most recent two hours of active trading time, not the last two hours by the
+      clock. For example, if an exchange closes for the weekend, then in the first 15 minutes of trading on Monday, we
+      would only see data for those 15 minutes. The following 105 minutes would represent the final part of Friday’s
+      trading.</p>
+    <p>2: Another key detail is that if no trades occur during a particular minute, that minute must still be listed.
+      The relevant columns would show “N/A,” while Volume would be recorded as
+      zero. This information highlights low liquidity or possible market uncertainty.</p>
+
+    <p>This style of reporting may seem unconventional at first. Why record data by the minute, and why only for the last two hours? The reason is that modern systems can capture and store this information almost instantly, making minute-by-minute reporting feasible. The two-hour window strikes a balance between providing timely insights and avoiding excessive data storage burdens on exchanges. It ensures a reasonable margin of safety for data consumers while keeping implementation practical.</p>
+
+    <h1>Why Mean Price and Per-Minute Reporting?</h1>
+    <ul>
+      <li><i class="fa fa-thumbs-up"></i> <b>Data Minimization:</b> Providing full order book snapshots or tick data would offer more insights, but it would also generate an overwhelming volume of data for both providers and consumers. Mean Price and per-minute reporting strike a balance between simplicity and completeness, significantly reducing the data exchanges need to publish while still offering valuable insights.</li>
+      <li><i class="fa fa-thumbs-up"></i> <b>Aggregation & Modularity:</b> This structured data can be aggregated over any time frame—hours, days, weeks, months, or years—allowing for flexible analysis. It serves as a modular foundation for building additional financial metrics, including:
+        Turn Over, Turn Over relative to Market Value, Mean-Based Bollinger Bands, Volatility & Dispersion Metrics,
+        Improved Risk & Statistical Measures, and Undoubtedly many others will be created</li>
+      <li><i class="fa fa-thumbs-up"></i> <b>Transparency & Fairness:</b> Per-minute data enables retail traders to get a more accurate sense of the market, helping them allocate resources more efficiently. It also reduces the perception that financial markets are designed to benefit only large players, fostering greater trust and market fairness.</li>
+    </ul>
+
+    <p>Replacing Last Price with Mean Price and other metrics can better serve different market objectives. For example, a more sophisticated limit order could be designed to execute only if the last 10-minute Mean Price drops below a certain threshold while the volume remains consistent with the daily Mean.</p>
+
+    <p>This shift moves us beyond black-and-white thinking and toward a more sophisticated, context-driven approach—one that asks:
+      <b><i>“Which price measure is the most representative for this particular situation?”</i></b></p>
+
+    <h2>Avoiding Central Planning</h2>
+
+    <p>We should resist the temptation to centrally plan industries or societies, as it often leads to more mistakes than truly informed decisions. No one should be forced to use the newly available data. The media can continue reporting Last Price if they choose, and financial firms can still rely on it for margin calls, options, trade limits, and other automated processes.</p>
+    <p>However, over time, most market participants will likely adopt more sophisticated metrics such as Mean Price, unlocking a wide range of efficiency and transparency benefits.</p>
+
+    <p>Mandating that exchanges publish new data falls squarely within the government's role of enhancing transparency—giving the public access to better information for smarter decision-making. This is a stark contrast to laws that attempt to micromanage markets, as it simply empowers individuals and institutions with better tools rather than dictating how they must use them.</p>
+
+
+    <h1>Are There Any Downsides to using Mean Price?</h1>
+    <p>While Mean Price is a more robust and reliable measure than Last Price, it is not perfect and may not be suitable for all situations. Let us explore some common concerns and potential strategies to mitigate risks and limitations.</p>
+
+    <div class="list-of-points">
+      <article>
+        <h3>Not Ideal for Real-Time Trading Decisions, Distortions in Illiquid Markets, Fear of Misinterpretation, New
+          Opportunities for Manipulation
+        </h3>
+        <b>Concerns:</b>
+        <ul>
+          <li>In fast-moving markets, traders might need the Last Price for immediate decision-making.</li>
+          <li>If retail traders don’t understand Mean Price well, they might over-rely on it without considering
+            important factors such as bid-ask spreads or real liquidity depth.</li>
+          <li>If some brokers show Last Price while others use Mean Price, retail traders may get confused.</li>
+          <li>If a market has huge gaps between trades, Mean Price may still be misleading if based on limited data.</li>
+          <li>Bad actors might time trades strategically to artificially inflate Mean Price, particularly in illiquid
+            markets.</li>
+          <li>Market anomalies like spoofing, wash trading, or flash crashes might be harder to detect in an Mean
+            Price system.</li>
+          <li>A smooth-looking Mean Price may mask sudden liquidity events, making it harder to detect market stress
+            signals (e.g., liquidity drying up before a crash).</li>
+          <li>If traders start fixating on Mean Price rather than market momentum, price discovery may slow down,
+            leading to less efficient markets.</li>
+        </ul>
+
+        <b>Mitigation:</b>
+        <ul>
+          <li>Traders and regulators are free to use any metrics they wish for their purposes, and optionally include
+            Mean Price with different timeframes if it helps their analysis.</li>
+            <li>While no market metric is entirely immune to manipulation, Mean Price is significantly harder to manipulate than Last Price because it requires substantial trading volume to meaningfully shift its value.</li>            
+          <li>Education on what metrics (or combinations) to use for each situation can be provided by brokers,
+            exchanges, financial advisors, books, influencers, etc.</li>
+          <li>Financial regulators and exchanges can coordinate an industry-wide standard for displaying multiple price
+            types together, reducing confusion or .</li>
+          <li>Brokers have the opportunity to add value by adding a "reliability score" (such as red, yellow and green),
+            based on the associated volume or other metrics. Other kinds of tools for traders can
+            also help.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Exchanges Considerations</h3>
+        <b>Concerns:</b>
+        <ul>
+          <li>Exchanges make substantial revenue by selling detailed market data to institutions. They might resist
+            giving away valuable insights for free.</li>
+          <li>Some types of traders thrive on tiny price movements & spread inefficiencies. If the new data eliminate
+            these opportunities, t, they may lobby against it.</li>
+        </ul>
+
+        <b>Mitigation:</b>
+        <ul>
+          <li>Consider that exchanges might experience a net positive gain, due to the increase the credibility and
+            transparency of the
+            market, by reducing undue volatility and making it harder to manipulate, and the costs to implement are
+            relatively low with modern technology.</li>
+          <li>Exchanges will still continue selling other types of data (such as order book data and more detailed
+            statistics) to institutions.</li>
+          <li>When the market reaches new levels of confidence and maturity
+            once
+            their learn to use these
+            new data points for the right problems, there could be an opportunity to expand the market for publicly
+            traded
+            assets. At the moment, only big companies can trade their stocks there, in part because liquidity is
+            necessary, but
+            there could be separate section of the market for medium sized companies to trade, because now the public
+            has better tools to manage low liquidity.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Added uncertainty and complexity</h3>
+        <b>Concerns:</b>
+        <ul>
+          <li>Last Price is deeply ingrained in market / legal infrastructure. Using Mean Price or other metrics
+            may be disruptive.
+            <ul>
+              <li>Market infracstructure such as trading platforms, financial advisors and media, and portfolio managers
+                would need to adjust algorithms, dashboards, and reporting tools, creating logistical costs and risks of
+                mistakes.</li>
+              <li>Legal infracstructure such as Many laws, particularly securities regulations & tax codes, assume Last
+                Price is the default reference. Updating them would take time & coordination.</li>
+            </ul>
+          </li>
+          <li>Mean Price not black and white like Last Price, Different situations may call for different timeframes
+            (e.g., 10min, 30min, 1 day, 3 days), increasing complexity.</li>
+        </ul>
+
+        <b>Mitigation:</b>
+
+        <ul>
+          <li>Highligthing that using Mean Price is optional at first, and as different use cases
+            move
+            to Mean Price, the mover can provide education to the public around why and how it will work. For
+            example,
+            if a broker
+            company reconfigures their margin call mechanisms to use 30min Mean Price instead of Last Prices,
+            they
+            can explain why this timeframe was chosen.</li>
+          <li>Governments & exchanges can phase in Mean Price rules slowly by first applying them only to specific
+            markets or trading instruments before making broader changes.</li>
+          <li>
+            Goverments tax rules (in the rare cases where they tax unrealized gains), can specify that the metric
+            chosen
+            was the last 30 days of the Financial Year for example, and why this choice was made.</li>
+          <li>
+            Choosing the right time frames is indeed extra work and complexity, but it is necessary and useful work to
+            make the markets
+            more
+            transparent, resilent and with the correct level of responsiveness. </li>
+          <li>
+            Backtesting & simulations can determine the most effective metrics and timeframes for different financial
+            scenarios, to find the best tool for the each job.</li>
+          </p>
+      </article>
+    </div>
+
+    <article>
+      <h1>Second Wave of Data Requirements</h1>
+
+      <p>Once these initial data requirements are successfully implemented, a second wave of additional data can be considered. However, further studies are needed to determine which data points best represent the market while maintaining a balance between:</p>
+
+      <ul>
+        <li>Minimalism vs. Data Overload</li>
+        <li>Ease of Computation</li>
+        <li>Aggregability Across Different Time Frames</li>
+        <li>Composability for Creating More Advanced Metrics</li>
+      </ul>
+
+      <p>Below are some initial suggestions for future improvements—an optional read, only for curious readers:</p>
+
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h4 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Initial Suggestions for a Second Wave of Data Requirements
+            </button>
+          </h4>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+
+            <p>Exchanges could also include this additional data in their daily and per-minute reports, providing deeper insights into market activity:</p>
+     
+            <ul>
+              <li><b>Volume:</b> The total number of assets traded. (This is already published by most exchanges in their
+                daily reports)</li>
+              <li><b>Mean Price:</b> The mean or average price, which can be used to calculate Turn Over and Turn Over
+                relative to market value.</li>
+              <li><b>2nd Unstandardized Central Moment (2UCM):</b> This measures how spread out the prices are around the
+                daily mean (also known as Variance). It can be used to calculate the Standard Deviation (the square root of
+                the variance), indicating how spread out the values are.</li>
+              <li><b>3rd Unstandardized Central Moment (3UCM):</b> This measures the asymmetry of the price distribution. It
+                can be used to calculate <a href="https://en.wikipedia.org/wiki/Skewness" target="_blank">Skewness</a>,
+                which shows whether the data is lopsided</li>
+              <li><b>4th Unstandardized Central Moment (4UCM):</b> This measures the "tailedness" of the price distribution
+                (how often extreme prices occur). It can be used to calculate <a
+                  href="https://en.wikipedia.org/wiki/Kurtosis" target="_blank">Kurtosis</a>, which indicates whether there
+                are many extreme values.</li>
+            </ul>
+
+            <p>If the reader is more of a visual learner, they can learn more about the Normal Curve, Standard Deviation, Modality, Skewness and Kurtosis in <a href="https://www.youtube.com/watch?v=HnMGKsupF8Q" target="_blank">this youtube video.</a></p>      
+      
+            <p><b>Explanation of Technical Terms:</b> Readers do not need to grasp every mathematical detail—a high-level conceptual understanding is sufficient. The following terms and formulas are well-established in statistics and help clarify key concepts discussed:</p>
+            <ul>
+              <li><b>Moment:</b> A moment describes the shape of a probability distribution. It is a way to capture
+                different aspects of how the data is spread out.</li>
+              <li><b>Central Moments:</b> These describe the distribution's shape relative to its mean. To calculate a
+                central moment, one takes the difference between each data point and the mean, raises that difference to a
+                certain power, and then averages these values.</li>
+              <li><b>Unstandardized vs. Standardized:</b> Unstandardized Moments are the "raw" moments, their units depend on the original data (e.g., if the price is in dollars, the 2UCM will be
+                in dollars squared). Standardized Moments are obtained by dividing the central moment by a power of the
+                standard deviation, which removes the units and allows for comparison across different scales or assets. We use unstandardized moments because they retain raw information for further calculations and can be standardized later when needed.
+              </li>
+            </ul>                   
+      
+            <p><b>Pros and Cons</b></p>
+            <ul>
+              <li><i class="fa fa-thumbs-up"></i> <b>Data Minimization:</b> It reduces the amount of data that exchanges need to publish compared to
+                providing full order book snapshots or tick data, which would indeed provide more insights, but also would
+                be a massive amount of data for providers and consuemrs to deal with. These metrics provide a balance
+                between simplicity and completeness.</li>
+              <li><i class="fa fa-thumbs-up"></i> <b>Completeness:</b> These data points supply all the necessary information to calculate the
+                volume-weighted mean, variance, standard deviation, skewness, and kurtosis accurately. They also allow
+                calculation of additional useful metrics such as Turn Over, Turn Over relative to Market Value, Coefficient
+                of Variation, risk-adjusted return metrics (e.g., Sharpe Ratio, Sortino Ratio), and mean Bollinger Bands.
+              </li>
+              <li><i class="fa fa-thumbs-up"></i> <b>Aggregation & Modularity:</b> This data can be aggregated to compute metrics over any time frame—hours, days, weeks, months, or years. Provides a modular foundation for building more advanced financial indicators.
+              </li>
+              <li><i class="fa fa-thumbs-up down"></i> <b>Not a Normal Distribution:</b> Most financial research agrees that trading data does not follow a normal distribution.
+                While the above metrics are useful, they must be applied with caution, ensuring they are not misused in inappropriate contexts where non-normal price behavior distorts results.
+              </li>              
+            </ul>
+
+            <p>Another useful set of metrics is percentiles (weighted by volume). These provide deeper insights into market behavior. The following percentiles could be included in daily and per-minute reports: 10th, 25th, 50th (median), 75th, 90th.</p>
+            <p><b>Pros and Cons</b></p>
+            <ul>
+              <li><i class="fa fa-thumbs-up"></i> <b>Outliers:</b> Percentiles provide an alternative perspective on the market, particularly useful for identifying outliers and extreme price movements.</li>
+              <li><i class="fa fa-thumbs-up"></i> <b>Complementary Insights:</b> Percentiles can supplement other indicators, offering guidance on market distribution characteristics (e.g., skewness, kurtosis) and helping determine which statistical models or indicators are most appropriate.</li>
+              <li><i class="fa fa-thumbs-up down"></i> <b>No Aggregation Across Time Frames:</b> Unlike mean-based metrics, percentiles from minute-level reports cannot be aggregated to create metrics for longer time frames (e.g., hours, weeks, months).</li>
+              <li><i class="fa fa-thumbs-up down"></i> <b>Computational Complexity:</b> Percentiles cannot be calculated using streaming algorithms with high precision. Instead, they require processing all price data at the end of a given period, making them more computationally expensive than previously suggested metrics.</li>
+              </li>              
+            </ul>            
+      
+            <p>Regulators may consider requiring additional metrics, such as: Algorithmic Trading Activity, Mean Ask-Bid Spread Per Minute, Number of Unique Buyers and Sellers, Number of Trades, Types of Traders (market vs. limit orders), Types of Traders (institutional vs. retail), Order Book Imbalance (the ratio of buy volume to sell volume)</p>
+            <p>However, we have not recommended these here, as their inclusion would require further analysis to prevent manipulation risks and unnecessary complexity.</p>
+      
+            <p>In summary, more research is needed to identify additional effective market metrics that are widely applicable, simple, and resistant to manipulation. However, this effort should not delay the implementation of more straightforward and clearly necessary changes, such as:</p>
+            <ul>
+              <li>Introducing Median Price as a key market metric</li>
+              <li>Enhancing reporting granularity with per-minute data</li>
+            </ul>
+
+            <p>Fortunately, additional metrics can be introduced later, in a second wave, once the first phase is successfully implemented. These future enhancements will create strong synergy with the foundational changes (like per-minute reporting), leveraging the new data infrastructure for further market improvements.</p>            
+
+            </div>
+          </div>
+        </div>        
+        </div>
+
+
+    </article>    
+
+    <article>
+      <h2>Conclusion</h2>
+      <p>Relying on Last Price as the primary metric for assessing market conditions is a fundamental mistake. It is akin to the old saying: "If all you have is a hammer, everything looks like a nail." This over-reliance creates misallocation of resources, encourages investor overreactions, increases market volatility, and makes the market more susceptible to manipulation.</p>
+
+      <p>In contrast, Mean Price is a more transparent, sophisticated, flexible and harder to manipulate metric. It is also composable, meaning it can serve as a foundation for more advanced financial and technological tools. By providing a more accurate reflection of market activity, it enables better decision-making and reduces the risks associated with misinterpreting price movements.</p>
+        
+        <p>A key example of such an improved financial tool will be introduced in a future article.</p>
+    </article>
+  </article>
+</main>
+
+<footer>
+  <h2>Key Concepts Reviewed</h2>
+  <ul class="key-concepts">
+    <li>Mean Price: The arithmetic mean price of a traded asset over a given time interval, weighted by volume. Also known as the Volume-Weighted Average Price (VWAP).</li>
+    <li>Last Price: The price at which the asset was most recently exchanged. When the market is closed, this is also referred to as the closing price.</li>
+  </ul>
+  <h2>More</h2>
+  <p>Question, comments, suggestions, constructive critisicm ? <a href="https://x.com/ErnestEnki" target="_blank">Reach
+      out to me</a></p>
+  <hr />
+  <p>Copyright: this page's content can be freely copied and shared, in part or in whole, for any purpose (including
+    commercial),
+    as long as a hyperlink to the original source (<span id="currentUrl"></span>) is included.</p>
+  <hr />
+</footer>
