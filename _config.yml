@@ -1,3 +1,21 @@
-theme: minima
 title: Ernest Enki information center
 author: Ernest Enki
+
+repository: ErnestEnki/ernestenki.github.io
+
+defaults:
+  - scope:
+      path: "_articles"  # Target the articles collection
+    values:
+      layout: "article"  # Set the default layout
+
+collections:
+  articles:
+    output: true
+    permalink: /articles/:title/
+    sort_by: date
+
+include:
+  - css
+  - js
+  - img

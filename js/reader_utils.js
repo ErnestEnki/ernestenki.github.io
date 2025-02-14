@@ -105,11 +105,6 @@ function CreateToolTipsForKeyConcepts() {
 
 }
 
-function ObtainCurrentUrl() {
-  document.getElementById('currentUrl').innerHTML = window.location.origin;
-}
-
-
 function CalculateReadingTime() {
   const text = document.querySelector('main').innerText;
   const wpm = 225;
@@ -121,5 +116,4 @@ function CalculateReadingTime() {
 SetupCustomizeReaderExperience();
 AddAnchorsToHeadings();
 CreateToolTipsForKeyConcepts();
-ObtainCurrentUrl();
 CalculateReadingTime();

@@ -1,24 +1,53 @@
 ---
 layout: default
-extra_head: <link href="article.css" rel="stylesheet" />
+extra_head: '<link href="/css/article.css" rel="stylesheet" />'
 ---
 <header class="sticky-header shadow-sm d-flex align-items-center justify-content-between">
   <a href="/" class="text-decoration-none fw-bold ms-3">
     <i class="fa fa-home"></i> Home
   </a>
 
-    <div class="text-center flex-grow-1">
-      <h1 class="mb-1">{{ page.title }}</h1>
-      <p class="small mb-0">{{ page.description }}</p>
-    </div>    
-    
-  </header>
-  
-  {{ content }}
-    
-  <footer>          
-    <a href="https://www.amazon.com/dp/B0DKNT5YHT" target="_blank"><img src="../books/patent_dystopia/images/cover.jpg" /></a>
-    You might enjoy my book <a href="https://www.amazon.com/dp/B0DKNT5YHT" target="_blank"><strong>Patent Dystopia</strong></a><br/>
-    How the Patent System Strangled Innovation, Job Creation, and the Economy. <br/>
-    <a href="/books/patent_dystopia/summary.html">Read the official summary here</a>
+  <div class="text-center flex-grow-1">
+    <h1 class="mb-1">{{ page.title }}</h1>
+  </div>
+</header>
+
+<footer>
+  <address class="d-inline"><a href="https://x.com/ErnestEnki" target="_blank">By Ernest Enki</a></address> |
+  Published on <time datetime="{{ page.date  | date: " %Y-%m-%d" }}">{{ page.date | date: "%B %d, %Y" }} </time> |
+  <a href="#" data-bs-toggle="modal" data-bs-target="#readerExpModal"><i class="fa fa-gear"></i> Customize reader
+    experience</a> | ~<span id="readingTime"></span> min read
+</footer>
+
+<hr />
+
+<article> 
+  <strong><i class="fa fa-lightbulb"></i> TLDR:</strong> {{ page.description }}
+</article>
+
+<hr />
+
+{{ content }}
+
+<hr />
+<footer>
+  <h2>Participate!</h2>
+  <p>Question, comments, suggestions, constructive critisicm ? <a href="https://x.com/ErnestEnki" target="_blank">Reach
+      out to me</a></p>
+    </footer>    
+  <hr />
+  <footer>
+  <p>Copyright: this page's content can be freely copied and shared, in part or in whole, for any purpose (including
+    commercial), 
+    as long as a hyperlink to the original source (<a href="{{ site.url }}{{ page.url }}">{{ site.url }}{{ page.url }}</a>) is included.</p>
   </footer>
+  <hr />
+<footer>
+  <a href="https://www.amazon.com/dp/B0DKNT5YHT" target="_blank"><img
+      src="/books/patent_dystopia/images/cover.jpg" /></a>
+  If you enjoyed this article, you might also enjoy my book <a href="https://www.amazon.com/dp/B0DKNT5YHT" target="_blank"><strong>Patent
+      Dystopia</strong></a><br />
+  How the Patent System Strangled Innovation, Job Creation, and the Economy. <br />
+  <a href="/books/patent_dystopia/summary.html">Read the official summary here</a>
+</footer>
+<hr />

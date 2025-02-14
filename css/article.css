@@ -16,15 +16,20 @@
 }
 
 @media not print {
-  main,
-  footer {
+
+  body > footer:first-of-type {
+    padding-top: 20px;
+  }
+  
+
+  body > *:not(header) {    
     padding: 0 3vh;
 
     h1,
     h2,
     h3 {
       scroll-margin-top: 70px;
-    }
+    }    
   }
 }
 
@@ -65,6 +70,7 @@ div:has(> math) {
 hr {
   height: 1px;
   border: none;
+  clear:both;
   background: linear-gradient(to right, rgba(0, 0, 0, 0.2), black, rgba(0, 0, 0, 0.2));
 }
 
