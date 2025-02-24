@@ -51,4 +51,6 @@ function generateTOC() {
   tocElement.appendChild(tocList);
 }
 
-generateTOC();
+document.addEventListener("DOMContentLoaded", (event) => {
+    generateTOC();
+  });
