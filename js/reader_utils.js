@@ -106,14 +106,43 @@ function CreateToolTipsForKeyConcepts() {
 }
 
 function CalculateReadingTime() {
+  var el = document.getElementById("readingTime");
+  if(!el) return;
+
   const text = document.querySelector('main').innerText;
   const wpm = 225;
   const words = text.trim().split(/\s+/).length;
   const time = Math.ceil(words / wpm);
-  document.getElementById("readingTime").innerText = time;
+  el.innerText = time;
+}
+
+function AddCollapsibleHeaders()
+{
+  let html = ' <i class="fa fa-chevron-up" onclick="collapseHeader(this);"></i>';
+  document.querySelectorAll("main h1, main  h2, main h3").forEach(heading => {
+    heading.insertAdjacentHTML("beforeend", html);
+  });
+}
+
+const displayShow = "block";
+const displayHidden = "none";
+const iconShow = "fa-chevron-up";
+const iconHidden = "fa-chevron-down";
+
+function collapseHeader(element)
+{  
+  const content = element.parentNode.nextElementSibling;   
+  const isHidden = content.style.display === displayHidden;
+  content.style.display = isHidden ? displayShow : displayHidden;
+
+  var iconBefore = isHidden ? iconShow : iconHidden;
+  var iconAfter = isHidden ? iconHidden : iconShow;
+  element.classList.replace(iconBefore, iconAfter);
+  
 }
 
 SetupCustomizeReaderExperience();
 AddAnchorsToHeadings();
 CreateToolTipsForKeyConcepts();
 CalculateReadingTime();
+AddCollapsibleHeaders();

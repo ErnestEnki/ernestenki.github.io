@@ -7,7 +7,7 @@ function generateTOC() {
       return;
   }
 
-  const headers = contentElement.querySelectorAll('h1, h2');
+  const headers = contentElement.querySelectorAll('h1');
   const tocList = document.createDocumentFragment();
 
   headers.forEach(header => {
