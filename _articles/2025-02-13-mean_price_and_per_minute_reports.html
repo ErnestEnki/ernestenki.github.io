@@ -5,6 +5,8 @@ draft: true
 ---
 <main>
   <article>
+    <h1>Intro</h1>
+    <div>
     <p>Assets such as stocks, ETFs, indexes, options, derivatives, commodities, currencies, cryptocurrencies and their
       tokens, bonds, fixed-income securities, and Real Estate Investment Trusts (REITs) are almost always evaluated
       based on their Last Price. This approach is seen everywhere: in news reports, academic papers, financial systems,
@@ -46,6 +48,7 @@ draft: true
 
       <article>
         <h2>Last Price is an Unstable Foundation</h2>
+        <div>
         <p>The Last Price is an unstable basis for important
         <ul>
           <li><b>market processes</b> such as margin calls, limit orders,
@@ -77,6 +80,7 @@ draft: true
             </p>
           </li>
         </ul>
+      </div>
       </article>
 
       <article>
@@ -149,8 +153,11 @@ draft: true
       be an incomplete and unintuitive way to analyze sales—yet this is exactly how financial markets report asset
       prices, relying on a few arbitrary points instead of a more sophisticated and scientifically sound representation
       of market activity.</p>
+    </div>
 
-    <h2>Solution part 1: Mean Price</h2>
+    <article>
+    <h1>Solution part 1: Mean Price</h1>
+    <div>
 
     <p>A more sensible default market metric for most situations is the Mean Price, where volume weighting is the only
       logical approach and is therefore implied. This metric, also known as the <a
@@ -159,10 +166,12 @@ draft: true
       simplicity, memorability, and effective communication, we will refer to VWAP simply as Mean Price.
     </p>
 
+    <article>
     <h3>Mean vs Average</h3>
     <p>The term "average" is an informal term that can refer to various statistical measures, including the arithmetic
       mean (which we will be using), but also the median, mode, geometric mean, or harmonic mean. The term "mean" is
       more precise in statistics and is therefore preferable whenever possible to avoid confusion.</p>
+    </article>
 
     <p>Although we learned how to calculate the weighted mean in
       primary school, we seem to have forgotten to use that skill where it matters most. Let us now calculate it for the
@@ -231,8 +240,12 @@ draft: true
 
     <p>Any exchange that displays Last Price—such as financial graphs, stock market web pages, and daily reports—must
       also display Mean Price alongside it, or let the user choose between Last Price and Mean Price.</p>
+      </div>
+    </article>
 
-    <h2>Solution part 2: Per-Minute Reporting</h2>
+    <article>
+    <h1>Solution part 2: Per-Minute Reporting</h1>
+    <div>
 
     <p>In addition to adding Mean Price to current reporting, we propose a new reporting requirement for exchanges:
       publishing an aggregated summary per asset, similar to existing daily reports, but at <b>one-minute intervals</b>.
@@ -330,8 +343,12 @@ draft: true
       minute-by-minute reporting feasible. The two-hour window strikes a balance between providing timely insights and
       avoiding excessive data storage burdens on exchanges. It ensures a reasonable margin of safety for data consumers
       while keeping implementation practical.</p>
+    </div>
+    </article>
 
+    <article>
     <h1>Why Mean Price and Per-Minute Reporting?</h1>
+    <div>
     <ul>
       <li><i class="fa fa-thumbs-up"></i> <b>Data Minimization:</b> Providing full order book snapshots or tick data
         would offer more insights, but it would also generate an overwhelming volume of data for both providers and
@@ -356,8 +373,14 @@ draft: true
       that asks:
       <b><i>“Which price measure is the most representative for this particular situation?”</i></b>
     </p>
+    </div>
+    </article>
 
-    <h2>Avoiding Central Planning</h2>
+
+  </article>
+  <article>
+    <h1>Avoiding Central Planning</h1>
+    <div>
 
     <p>We should resist the temptation to centrally plan industries or societies, as it often leads to more mistakes
       than truly informed decisions. No one should be forced to use the newly available data. The media can continue
@@ -370,9 +393,12 @@ draft: true
       transparency—giving the public access to better information for smarter decision-making. This is a stark contrast
       to laws that attempt to micromanage markets, as it simply empowers individuals and institutions with better tools
       rather than dictating how they must use them.</p>
+    </div>
+    </article>
 
-
+    <article>
     <h1>Are There Any Downsides to These Suggestions?</h1>
+    <div>
     <p>While Mean Price is a more robust and reliable measure than Last Price, it is not without limitations and may not be suitable for every situation. Similarly, Per-Minute Reporting may introduce new challenges that need careful consideration.</p>
     <p>Let us explore some common concerns, answering them through: clarifying misunderstandings, proposing potential solutions, identifying ways to mitigate risks and minimize negative impacts.</p>
 
@@ -381,6 +407,7 @@ draft: true
         <h3>Not Ideal for Real-Time Trading Decisions, Distortions in Illiquid Markets, Fear of Misinterpretation, New
           Opportunities for Manipulation
         </h3>
+        <div>
         <b>Concerns:</b>
         <ul>
           <li>In fast-moving markets, traders may still need Last Price for immediate decision-making.</li>
@@ -403,10 +430,12 @@ draft: true
           <li>Brokers and financial platforms can introduce indicators like "Reliability Scores" (e.g., red, yellow, green)
             based on volume strength, recent Mean Price stability or other market health indicators. These enhancements would help traders avoid manipulation traps and make more informed decisions, without limiting their freedom.</li>
         </ul>
+      </div>
       </article>
 
       <article>
         <h3>Exchanges Considerations</h3>
+        <div>
         <b>Concerns:</b>
         <ul>
           <li>Exchanges generate substantial revenue by selling detailed market data to institutional clients. They may resist providing valuable insights for free.</li>
@@ -420,10 +449,12 @@ draft: true
           <li>Modern technology makes implementation costs relatively low, making this a cost-effective upgrade rather than a financial burden.</li>
           <li>More transparent market conditions could pave the way for the expansion of publicly traded assets. Currently, only large companies list on major exchanges, in part due to liquidity constraints. With better tools to manage low-liquidity assets, medium-sized companies could gain a dedicated section of the market, increasing market participation and exchange revenues.</li>
         </ul>
+      </div>
       </article>
 
       <article>
         <h3>Added uncertainty and complexity</h3>
+        <div>
         <b>Concerns:</b>
         <ul>
           <li>Last Price is deeply ingrained in market / legal infrastructure. Using Mean Price or other metrics
@@ -449,11 +480,16 @@ draft: true
           <li>Selecting appropriate timeframes is an added layer of complexity, but it is useful and necessary to create a more transparent, resilient, and fair financial system. Markets should be responsive—but not overly reactive. Choosing the right timeframes helps strike this balance.</li>
           <li>Market simulations and backtesting can determine the most effective Mean Price timeframes for various use cases such as trading, valuation, and risk management scenarios. This ensures that the right tool is used for the right job, improving overall market efficiency.</li>
         </ul>
+      </div>
       </article>
     </div>
+    </div>
+    </article>
 
     <article>
       <h1>Second Wave of Data Requirements</h1>
+
+      <div>
 
       <p>Once these initial data requirements are successfully implemented, a second wave of additional data can be
         considered. However, further studies are needed to determine which data points best represent the market while
@@ -602,10 +638,12 @@ draft: true
           </div>
         </div>
       </div>
+    </div>
     </article>
 
     <article>
-      <h2>Conclusion</h2>
+      <h1>Conclusion</h1>
+      <div>
       <p>Relying on Last Price as the primary metric for assessing market conditions is a fundamental mistake. It is akin to the old saying: "If all you have is a hammer, everything looks like a nail." This over-reliance leads to resource misallocation, investor overreactions, increased market volatility, and greater susceptibility to manipulation.</p>
 
       <p>In contrast, Mean Price is a more sophisticated, flexible, and resistant-to-manipulation metric. When combined with Per-Minute Reporting, it enhances financial transparency, levels the playing field between retail and institutional investors, and improves data composability—allowing it to serve as a foundation for more advanced financial and technological tools.</p>
@@ -613,6 +651,7 @@ draft: true
       <p>By providing a more accurate reflection of market activity, Mean Price and Per-Minute Reporting enable better decision-making, improved resource allocation, and reduced risks associated with misinterpreting price movements.</p>
 
       <p>A key example of an improved financial tool leveraging these principles will be introduced in a future article.</p>
+    </div>
     </article>
   </article>
 </main>
