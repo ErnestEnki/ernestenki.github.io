@@ -151,11 +151,11 @@ extra_head: '
           Prediction Markets—a system designed to offer even greater benefits to investors, businesses, and society at
           large.</p>
 
-        <p>A Price Prediction Market is a <b>purpose-built</b> system designed to create a market (preferably public)
+        <p>A Price Prediction Market is a new <b>purpose-built</b> sub-type of prediction market, with exclusive features, designed to create a
+          market (preferably public)
           for betting on
-          and predicting <b>future asset prices</b> (e.g., currencies, commodities, stocks, bonds, cryptocurrencies, and
-          their
-          tokens) while incurring <b>minimal undue risks</b> to participants and financial markets. Its <b>primary goal
+          and predicting <b>future asset prices</b> (e.g., currencies, commodities, stocks, ETFs, indexes, bonds, cryptocurrencies, and
+          their tokens) while incurring <b>minimal undue risks</b> to participants and financial markets. Its <b>primary goal
             is to act as an early warning system</b>, monitoring and reporting problems such as
           fraud, false promises, corruption, and financial instability. Secondary goals are:
         <ul>
@@ -167,6 +167,7 @@ extra_head: '
             accessible to a broader audience.</li>
         </ul>
         </p>
+        <p>From this point forward, we will use the term prediction markets when discussing characteristics that apply to all types of such markets. When referring to characteristics specific to Price Prediction Markets, we will explicitly state so.</p>
       </div>
     </article>
 
@@ -586,10 +587,15 @@ extra_head: '
 
         </div>
 
-        <p>The public over time would grow to use these predictions as another signal in their analysis, before they
-          invest in the spot market, or join a company as an employee for example.</p>
-        <p>These signals could even be integrated into financial tools, for example this is how a spot market broker
-          interface might look like:</p>
+        <p>Over time, the public could come to rely on these predictions as an additional signal in their
+          decision-making process—whether before investing in the spot market or even when considering employment at a
+          company.</p>
+
+        <p>These signals could also be integrated into financial tools. For example, a spot market broker interface
+          might display prediction market data alongside traditional stock information, helping investors make more
+          informed choices.</p>
+
+        <p>Below is an example of how such an interface might look:</p>
 
         <div class="container mt-5">
           <div class="card shadow-lg border p-4 mx-auto">
@@ -613,46 +619,53 @@ extra_head: '
             <p>Last Price=$68.73</p>
             <p>Last 15min Mean Price=$67.15 (<span class="confidence high">$0.35m volume</span>)</p>
             <p>Last 30min Mean Price=$67.45 (<span class="confidence medium">$0.41m volume</span>)</p>
-            <p>Our Analysists recommendations=HOLD</p>
+            <p>Our Analysts’ Recommendation: <b>HOLD</b></p>
 
-            <p>Top 3 most popular future Price Prediction Market bets: </p>
+            <p>Top 3 Most Popular Future Price Prediction Market Bets:</p>
 
             <canvas id="pricePredictionMarketChart"></canvas>
 
-            <p>Graph and data explanation:</p>
+            <p>Graph and Data Explanation:</p>
+            <p>Each time period in the graph displays three bars:</p>
             <ul>
-              <li>Each time period has three bars, from the left most is the 1st most popular price prediction, to the
-                last one that represents the 3rd most popular price prediction.</li>
-              <li>The colors represent our calculated confidence level, based on volume, how far the prediction is, and
-                other factors considered to avoid price manipulation:
-                <ul>
-                  <li><span class="confidence high">Represents <b>high</b> market confidence</span></li>
-                  <li><span class="confidence medium">Represents <b>medium</b> market confidence</span> </li>
-                  <li><span class="confidence low">Represents <b>low</b> market confidence</span></li>
-                </ul>
+              <li>The leftmost bar represents the most popular price prediction.</li>
+              <li>The middle bar represents the second most popular price prediction.</li>
+              <li>The rightmost bar represents the third most popular price prediction.</li>
+            </ul>
+            <p>You can mouse over the bar to see it's details and detailed statistical data.</p>
+            <p>The colors indicate our calculated confidence level, which considers factors such as trading volume,
+              prediction time horizon, and safeguards against price manipulation:</p>
+
+            <ul>
+              <li><span class="confidence high">High confidence – Strong market agreement and substantial volume.</span>
               </li>
+              <li><span class="confidence medium">Medium confidence – Moderate certainty with mixed signals.</span>
+              </li>
+              <li><span class="confidence low">Low confidence – Limited market participation or higher
+                  uncertainty.</span></li>
             </ul>
           </div>
         </div>
 
-
-
-        <p>As always, the devil is in the details—many complexities need to be addressed, such as:</p>
+        <p>As always, the devil is in the details—many complexities must be addressed, including:</p>
 
         <ul>
-          <li>What happens if an asset ceases trading due to bankruptcy or low market liquidity? Should the price be
-            assumed
-            zero for betting purposes? Should the bet be canceled, with funds returned to bettors?</li>
-          <li>How should early bets be encouraged without completely disincentivizing later bets?</li>
-          <li>How can more precise bets be rewarded without discouraging participation?</li>
+          <li>Handling Trading Halts and Bankruptcies: If an asset ceases trading due to bankruptcy or low liquidity,
+            should the price be assumed to be zero for betting purposes? Or should bets be canceled and funds returned
+            to participants?</li>
+          <li>Balancing Early and Late Bets: How can the system encourage early bets without making later participation
+            unattractive?</li>
+          <li>Incentivizing Precision Without Exclusion: How can more precise bets be rewarded without discouraging
+            overall participation?</li>
+          <li>Presenting Prediction Data Effectively: What data should be displayed, and how can it be tailored to users
+            with different levels of expertise?</li>
         </ul>
 
-        <p>The exact mechanisms should be the subject of further discussions, studies, and experiments. The goal of this
-          article is not to provide absolute answers at the most detailed level but to start a conversation about these
-          key
-          issues. This article's primary focus is on how Price Prediction Markets can function on a high level and how
-          they can
-          help society.</p>
+        <p>These mock screens provided here are just an initial suggestion. The exact mechanisms should be refined
+          through further discussion, research, and experimentation.</p>
+        <p>The goal of this article is not to provide final, definitive answers but to spark a conversation about these
+          critical issues. The primary focus is on how Price Prediction Markets can function at a high level and how
+          they can contribute to a more transparent and efficient society.</p>
       </div>
     </article>
 
@@ -667,7 +680,8 @@ extra_head: '
               exposing
               problems. By leveraging the collective wisdom of market
               participants,
-              these mechanisms can identify, anticipate, and potentially mitigate a wide range of problems before they
+              these mechanisms can identify, anticipate, and potentially help society mitigate a wide range of problems
+              before they
               escalate,
               such as:</p>
 
@@ -678,11 +692,12 @@ extra_head: '
               <li><b>Market Manipulation & Structural Weaknesses</b> – Uncovering pump-and-dump schemes, artificial
                 price
                 inflation, excessive leverage, and shadow banking risks that could destabilize markets.</li>
-              <li><b>Scams and Frauds</b> – Exposing Ponzi schemes, fraudulent ICOs, rug pulls, and misleading
+              <li><b>Scams and Frauds</b> – Exposing Ponzi schemes, fake news, disinformation, exaggerated promises,
+                fraudulent ICOs, rug pulls, and misleading
                 investment
                 opportunities that prey on uninformed investors.</li>
               <li><b>Supply Chain Disruptions & Commodity Price Shocks</b> – Predicting critical shortages, logistical
-                bottlenecks, trade wars, and energy price swings before they ripple across economies.</li>
+                bottlenecks, trade wars, pandemics, and energy price swings before they ripple across economies.</li>
               <li><b>Legal Risks & Regulatory Crackdowns</b> – Forecasting the likelihood of corporate lawsuits,
                 antitrust
                 enforcement and regulatory investigations.
@@ -693,6 +708,9 @@ extra_head: '
               <li><b>Social Trends & Cultural Shifts Impacting Markets</b> – Spotting consumer behavior changes,
                 declining
                 demand for legacy industries, and public backlash against companies due to ethical concerns.</li>
+
+              <li><b>Economic Crashes & Bubbles</b> – Signalling the likelyhood of market bubbles, recessions, and
+                banking crises, such as the 2008 financial crisis.</li>
               <li><b>Political & Geopolitical Instability</b> – Anticipating government defaults, economic sanctions,
                 civil
                 unrest, and military conflicts that could affect investment flows and global trade.</li>
@@ -718,20 +736,16 @@ extra_head: '
                 industries, and political systems.</li>
             </ul>
 
-            <p>By incentivizing market participants to identify and act on early warning signals, prediction markets
+            <p>By incentivizing market participants to identify and act on early warning signals, Price Prediction
+              Markets
               could
-              become one of the most effective tools for regulation, risk mitigation, and economic transparency. Rather
+              become one very powerful tool for risk mitigation and economic transparency. Rather
               than
               relying on slow, reactive decision-making, these markets would enable real-time risk assessment, helping
-              society preemptively address threats before they spiral into crises.</p>
-            <p>This approach could reduce the need for reactionary policymaking, such as the 2008 financial bailout,
-              where
-              governments were forced to intervene only after systemic risks had already materialized.</p>
-            <p>Instead of waiting for economic disasters to unfold, prediction markets could serve as an early-warning
-              system, identifying vulnerabilities before they escalate into full-blown crises. This would allow
+              society preemptively address threats before they spiral into crises. This would allow individuals,
               policymakers, investors, and institutions to take proactive, data-driven corrective action, improving
-              market
-              stability and risk management while reducing the likelihood of costly, last-minute interventions.</p>
+              market stability and risk management while reducing the likelihood of costly, last-minute interventions.
+            </p>
           </div>
         </article>
 
@@ -763,33 +777,36 @@ extra_head: '
               behavior,
               and industry trends might have placed bets against Enron’s stability, signaling its weaknesses to the
               broader
-              market and potentially accelerating accountability before billions were lost. This type of system could
-              serve
-              as a
-              decentralized check on corporate fraud and institutional failures, incentivizing independent actors to
-              expose
-              corruption and mismanagement long before regulators intervene.</p>
+              market and potentially accelerating accountability before billions were lost.</p>
           </div>
         </article>
 
         <article>
-          <h2>Accurate Price Discovery</h2>
+          <h2>Improved Price Discovery and Signalling</h2>
 
           <div>
 
             <h3>Aggregation and Transparency</h3>
             <div>
 
-              <p>Sometimes no single person has proof of fraud, yet many have small doubts. Prediction markets are adept
-                at
-                detecting subtle signals by quantifying the balance of opinion. For example, suppose a few minor
-                oddities in
-                a
-                company’s reports are noticed by different analysts; individually they might shrug it off, but if they
-                all
-                trade on a “something’s fishy” contract, the price moves enough to signal a real issue. </p>
-              <p>a skilled data scientist or an investigative journalist might participate in a market about a company’s
-                future troubles, contributing analysis outside the usual Wall Street sphere.</p>
+              <p>Sometimes, no single person has definitive proof of a problem, yet many may harbor small doubts.
+                Prediction markets excel at detecting these subtle signals by quantifying the collective balance of
+                opinion.</p>
+              <p>For example, imagine several analysts notice minor irregularities in a company’s financial reports.
+                Individually, they might dismiss them as insignificant. But if they all trade on a prediction market
+                focused on potential corporate misconduct, the market price could shift enough to signal a genuine
+                concern.</p>
+              <p>Often, information about problems is <b>fragmented</b>:</p>
+              <ul>
+                <li>An engineer sees that a project is behind schedule.</li>
+                <li>A salesperson notices a product is not selling well.</li>
+                <li>An accountant spots a red flag in a financial ledger.</li>
+              </ul>
+              <p>Individually, none of them may grasp the full picture. But a prediction market allows each to
+                contribute their insights through trading, creating a price that reflects all these pieces together.</p>
+
+              <p>External participants, like a skilled data scientist or investigative journalist could participate in a
+                market predicting corporate troubles, bringing analysis from outside traditional financial circles.</p>
 
               <p>Information about problems is often fragmented – one engineer knows a project is behind schedule, a
                 salesperson knows a product isn’t selling, an accountant sees a red flag in one ledger. Individually,
@@ -799,15 +816,14 @@ extra_head: '
                 trading.
                 The result is a price that reflects all these pieces together. </p>
 
-              <p>Furthermore, if future predictions are not in line with a company's expectation, it encourages them to
-                be
-                more transparent by releasing more details about future plans and projects.</p>
+              <p>Furthermore, if future price predictions diverge significantly from a company’s expectations, it
+                pressures the company to be more transparent. To restore confidence, they may feel compelled to release
+                more details about future plans and projects.</p>
 
-              <p>Anonymity Encourages Honesty: In a well-designed prediction market (especially a decentralized one),
-                traders
-                can be anonymous or pseudonymous. This lowers the barrier for insiders or whistleblowers to participate.
-                Instead of going on record with allegations (and risking their job), an insider can anonymously bet on
-                negative outcomes they believe will occur. </p>
+              <p>In a well-designed prediction market—especially a decentralized one—traders can remain anonymous or
+                pseudonymous. This lowers the barrier for insiders or whistleblowers to participate. Instead of making
+                public allegations and risking their jobs, an insider can place an anonymous bet on negative outcomes
+                they believe will unfold.</p>
             </div>
 
             <h3>Continuous monitoring</h3>
@@ -842,7 +858,7 @@ extra_head: '
               <p>Investors navigating uncertain markets can use prediction markets as an additional source of
                 reassurance
                 when
-                deciding whether to buy or hold an asset. By analyzing the collective sentiment and betting activity,
+                deciding whether to buy/sell/hold an asset. By analyzing the collective sentiment and betting activity,
                 they
                 gain
                 insight into market expectations beyond traditional financial indicators.</p>
@@ -850,8 +866,8 @@ extra_head: '
               <p>Moreover, while fraudulent schemes can afford polished websites, aggressive online ads, and extensive
                 marketing,
                 they are unlikely to place large bets on their own long-term value at meaningful volumes. A public
-                prediction
-                market would expose this weakness, as assets tied to scams would consistently show low betting volumes
+                Price Prediction Market would expose this weakness, as assets tied to scams would consistently show low
+                betting volumes
                 and
                 weak
                 market confidence. Over time, savvy investors could consult prediction markets before making financial
@@ -860,13 +876,6 @@ extra_head: '
 
               <p>Ultimately, these effects could increase trust and participation in financial markets, making them more
                 accessible and resilient for a broader range of investors.</p>
-            </div>
-
-            <h3>Flexible Risk Management Through Multiple Bets</h3>
-            <div>
-              <p>Traders can place multiple bets to hedge risk or to reflect the probability of different scenarios,
-                further
-                enhancing market accuracy and making it a richer source of information.</p>
             </div>
 
             <h3>Improving Price Discovery for Illiquid and Emerging Assets</h3>
@@ -878,6 +887,47 @@ extra_head: '
                 smoothing
                 out
                 erratic price swings and reducing artificial volatility.</p>
+            </div>
+
+            <h3>Time Frame Signalling</h3>
+            <div>
+              <p>The spot market can provide future signals as well. For example, if investors believe a company CEO’s
+                strategy or a country president’s policies are ineffective, stock or currency prices may drop. However,
+                this is a blunt signal—it simply indicates pessimism but does not clarify what part of the future is
+                being impacted.</p>
+              <ul>
+                <li>Does the market expect trouble in the next few months?</li>
+                <li>Is the concern more medium-term?</li>
+                <li>Could the plans be strong in the short term but disastrous in the long run?</li>
+              </ul>
+
+              <p>Other markets, such as derivatives, have limitations in future signaling. As discussed, they typically
+                provide forecasts only up to six months ahead.</p>
+
+              <p>Price Prediction Markets, on the other hand, offer a more precise, detailed, and <b>time extensive
+                  price-signaling mechanism</b>, capturing the impact of news across multiple time frames and providing
+                deeper insights into future expectations.</p>
+              <p>To enhance this even further, Price Prediction Markets could:</p>
+              <ul>
+                <li>Display all bets by default, allowing users to see the full spectrum of sentiment.</li>
+                <li>Allow filtering by time, so users can compare different time frames. For example: how bets placed
+                  last week differ from those placed the week before?</li>
+              </ul>
+              <p>This flexibility would offer deeper insights into shifting expectations, enabling individuals,
+                researchers, investors, businesses, and policymakers to make more informed decisions.</p>
+              <p>Long-term predictions, in particular, could be especially valuable for institutional investors, pension
+                funds, governments, and corporations that depend on long-term financial projections for strategic
+                planning and decision-making.</p>
+
+              <p>A strong example of how time-frame signaling could have been valuable is General Electric (GE). In the
+                1980s and 1990s, GE was a Wall Street favorite, consistently reporting strong financial performance.
+                However, it later became clear that much of its short-term success was fueled by aggressive cost-cutting
+                and reduced long-term investments—decisions that ultimately left the company unprepared for future
+                challenges.</p>
+              <p>A Price Prediction Market could have revealed this imbalance by signaling that while GE’s short-term
+                outlook appeared strong, its long-term prospects were deteriorating. This would have allowed
+                shareholders to assess whether they wanted to stay on that trajectory or demand strategic adjustments
+                before long-term weaknesses materialized.</p>
             </div>
         </article>
 
@@ -932,111 +982,7 @@ extra_head: '
           </div>
         </article>
 
-        <article>
-          <h2>Superior Long-Term Investment Forecasting</h2>
-          <div>
-            <p>Prediction markets could introduce long-term (multi year) price forecasting, offering less noise and
-              greater
-              precision than traditional stock trading. Unlike daily market speculation, or options and futures markets
-              that
-              only focus in the next few months,
-              these markets would encourage a long-term outlook, reducing speculation-driven volatility and providing
-              more
-              stable and reliable signals for
-              investors.</p>
-            <p>This could be particularly valuable for institutional investors, pension funds, governments, and
-              corporations
-              that rely on long-term financial projections to make strategic decisions.</p>
-            <p>For example, a prediction market in 2005 could have signaled Amazon’s (AMZN) future dominance long before
-              mainstream investors fully recognized its potential</p>
-          </div>
-        </article>
 
-        <article>
-          <h2>Public Persona Bets</h2>
-          <div>
-            <p>Individuals with potential conflicts of interest, such as politicians, regulators, corporate executives,
-              and
-              financial commentators, could be required—or given the option—to have their bets in Price Prediction
-              Markets
-              made
-              public. This could be done with a delay to prevent immediate copycat behavior while still ensuring
-              transparency.
-            </p>
-            <p>Additionally, an AI-powered tracking system could flag contradictions between public statements and
-              private
-              betting positions, helping to detect potential conflicts of interest or unethical behavior in real-time.
-            </p>
-          </div>
-        </article>
-
-        <article>
-          <h2>Reducing Financial Fake News, Disinformation and risks</h2>
-          <div>
-            <p>Prediction markets could hold company leaders, journalists, influencers, and media outlets accountable
-              for
-              their
-              claims. If a news story confidently states, “Company X will reach $100 per share this year”, or "Their new
-              product is very innovative" but the market
-              overwhelmingly bets against it, readers receive an instant credibility signal. Similarly, when companies
-              make
-              overly optimistic claims about new products or market expansions, futures markets could serve as a reality
-              check.
-            </p>
-            <p>By aligning financial incentives with accuracy rather than hype, prediction markets could discourage
-              pump-and-dump schemes, filter out misinformation, and shift market narratives toward truth-seeking rather
-              than
-              speculation. When credibility is directly tied to market expectations, exaggerated claims would become far
-              easier
-              to spot—and far riskier for those making them.</p>
-          </div>
-        </article>
-
-        <article>
-          <h2>Early Warning System for Economic Crashes & Bubbles</h2>
-          <div>
-            <p>Prediction markets could serve as a real-time risk indicator for market bubbles, recessions, and banking
-              crises.
-              If too many traders place bets on an imminent market downturn, it would signal regulators, investors, and
-              the
-              public to take preemptive action—offering a far more dynamic alternative to traditional economic
-              forecasting
-              models, which have repeatedly failed to predict crises.</p>
-            <p>Unlike centralized institutions such as the Federal Reserve, which often control the financial narrative,
-              a
-              prediction market represents a decentralized risk assessment tool, capturing collective insights that
-              might
-              otherwise go ignored.</p>
-
-            <p>For example, before the 2008 financial crisis, a prediction market signals from banks that held
-              mortgage-backed
-              securities
-              could have flagged the risks earlier, warning investors and regulators before the situation spiraled into
-              a
-              full-blown collapse.</p>
-          </div>
-        </article>
-
-        <article>
-          <h2>Detecting and Reducing Global Risks</h2>
-          <div>
-
-            <p>Beyond financial markets, prediction markets could provide early detection mechanisms for catastrophic
-              global
-              events, such as pandemics, cyberattacks, or supply chain disruptions. By making these risks visible
-              earlier,
-              societies could take proactive measures to reduce their impact or hedge against potential losses.</p>
-
-            <p>For instance, a prediction market in late 2019 could have shown a higher probability of COVID-19
-              escalating
-              into
-              a global pandemic, reflected by a drop in airline stock predictions and an increase in demand forecasts
-              for
-              pharmaceutical companies. Such signals might have encouraged governments and businesses to act faster,
-              mitigating
-              some of the worst consequences of the outbreak.</p>
-          </div>
-        </article>
 
       </article>
 
@@ -1056,9 +1002,7 @@ extra_head: '
             <h2>Poor Reporting of Problems</h2>
             <div>
               <p>Concern: While Price Prediction Markets can help identify and monitor problems, their ability to report
-                issues
-                in
-                detail is limited compared to other Adversarial Oversight mechanisms like whistleblowers.</p>
+                issues in detail is limited compared to other mechanisms like whistleblowers or short sellers.</p>
               <p>Whistleblowers provide comprehensive, detailed disclosures of organizational misconduct, often at great
                 personal
                 risk and with the public’s well-being in mind. In contrast, Price Prediction Market participants do not
@@ -1627,6 +1571,8 @@ extra_head: '
               <p>In both cases, the act of predicting an outcome alters reality, making long-term bets less reliable as
                 investment
                 tools.</p>
+
+                <p>Solution, longer time periods, like 1 year, or the last 1y ?</p>
 
               <p>If Price Prediction Markets influence their own outcomes, certain timeframes may prove more effective
                 for
