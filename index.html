@@ -14,7 +14,7 @@ extra_head: '<link rel="prefetch" href="/books/patent_dystopia/summary.html" />'
 </style>
 <main class="container">
 
-    <h1>Welcome to Ernest Enki Central!</h1>
+    <h1>Welcome</h1>
     <p>Welcome to the central repository for all official information related to Ernest Enki!</p>
 
     <h1>My books</h1>
@@ -42,8 +42,8 @@ extra_head: '<link rel="prefetch" href="/books/patent_dystopia/summary.html" />'
     <div>
         <p>A collection of my shorter insights in the form of articles:</p>
         <ul>
-            {% assign filtered_articles = site.articles | where_exp: "article", "article.draft != true" %}
-            {% for article in filtered_articles %}
+            {% assign filtered_articles = site.articles |  where_exp: "article", "article.draft != true" %}
+            {% for article in filtered_articles reversed  %}
             <li><a href="{{ article.url }}">{{ article.title }}</a>: {{ article.description | strip_html }}</li>
             {% endfor %}
         </ul>
