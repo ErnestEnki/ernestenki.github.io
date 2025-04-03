@@ -94,7 +94,22 @@ extra_head: <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10
       <div class="col-auto d-flex flex-column flex-md-row gap-3 cta-buttons">
         <a href="summary.html" class="btn btn-outline-primary btn-lg"><i class="fa-solid fa-grip-lines"></i> Read Short Summary</a>
           <a href="comprehensive_summary.html" class="btn btn-outline-primary btn-lg"><i class="fa-solid fa-file-lines"></i> Read Long Summary</a>
-            <a href="https://www.amazon.com/dp/B0DKNT5YHT" class="btn btn-success btn-lg"><i class="fa-solid fa-book"></i> Buy the Book</a>
+            <a href="https://www.amazon.com/dp/B0DKNT5YHT" target="_blank" onclick="gtag_report_conversion()" class="btn btn-success btn-lg"><i class="fa-solid fa-book"></i> Buy the Book</a>
       </div>
     </div>
   </div>
+
+  <!-- Event snippet for Click Buy Book conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+  function gtag_report_conversion() {
+    gtag('event', 'conversion', {
+        'send_to': 'AW-1016486396/pSWLCNChrrMaEPyz2eQD',
+        'value': 3.0,
+        'currency': 'AUD',
+        'transaction_id': ''
+    });
+    return false;
+  }
+  </script>
+  
