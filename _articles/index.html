@@ -1,0 +1,20 @@
+---
+layout: default
+title: Articles
+description: Articles written by Ernest Enski
+draft: true
+---
+<main class="container">
+
+    <h1>Articles</h1>
+    <div>
+
+        {% assign filtered_articles = site.articles | where_exp: "article", "article.draft != true" %}
+        {% for article in filtered_articles reversed %}
+
+        <p><a href="{{ article.url }}"><strong>{{ article.title }}</strong></a>: {{ article.description | strip_html }}</p>
+        {% endfor %}
+
+    </div>
+
+</main>
