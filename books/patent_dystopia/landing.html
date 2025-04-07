@@ -10,8 +10,6 @@ extra_head: <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10
   .book-cover {
     max-width: 100%;
     height: auto;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   .book-description {
     font-size: 1.1rem;
@@ -26,11 +24,15 @@ extra_head: <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10
   <div class="row align-items-center gx-5 px-4 px-lg-5">
     <!-- Book Cover -->
     <div class="col-lg-4 text-center mb-4 mb-lg-0">
-      <img src="images/cover.jpg"" alt=" Book Cover" class="book-cover w-75 w-md-100" />
+      <img src="images/cover.png"" alt=" Book Cover" class="book-cover w-75 w-md-100" />
     </div>
 
     <!-- Description -->
     <div class="col-lg-8 book-description">
+      
+      <div class="text-center p-3">
+      <a href="https://www.amazon.com/dp/B0DKNT5YHT" target="_blank" onclick="gtag_report_conversion()" class="btn btn-success btn-lg"><i class="fa-solid fa-book"></i> Buy the Book</a>
+    </div>
       <p>
         Humanity faces a multitude of challenges, including climate change, economic bubbles and inequality, poor Education , addictions, and many more. But what if the root cause, the hidden constraint, lies not in individual problems, but in the very system that is supposed to encourage progress?
       </p>
@@ -93,7 +95,7 @@ extra_head: <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10
     <div class="row mt-5 justify-content-center">
       <div class="col-auto d-flex flex-column flex-md-row gap-3 cta-buttons">
         <a href="summary.html" class="btn btn-outline-primary btn-lg"><i class="fa-solid fa-grip-lines"></i> Read Short Summary</a>
-          <a href="comprehensive_summary.html" class="btn btn-outline-primary btn-lg"><i class="fa-solid fa-file-lines"></i> Read Long Summary</a>
+          <a href="comprehensive_summary.html" class="btn btn-outline-primary btn-lg"><i class="fa-solid fa-file-lines"></i> Read Comprehensive Summary</a>
             <a href="https://www.amazon.com/dp/B0DKNT5YHT" target="_blank" onclick="gtag_report_conversion()" class="btn btn-success btn-lg"><i class="fa-solid fa-book"></i> Buy the Book</a>
       </div>
     </div>
