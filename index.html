@@ -39,7 +39,9 @@ extra_head: '<link rel="prefetch" href="/books/patent_dystopia/summary.html" />'
 
     <h1>Articles</h1>
     <div>
-        <p>A collection of my shorter insights in the form of articles:</p>
+        <p>A collection of my shorter insights in the form of articles. 
+            <a href="/rssfeed.xml" target="_blank" rel="noopener">RSS <i class="fa-solid fa-rss" title="Subscribe to RSS feed"></i></a>
+        </p>
         
             {% assign filtered_articles = site.articles |  where_exp: "article", "article.draft != true" %}
             {% for article in filtered_articles reversed  %}

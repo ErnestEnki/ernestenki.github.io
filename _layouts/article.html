@@ -1,15 +1,20 @@
 ---
 layout: default
-extra_head: '<link href="/css/article.css" rel="stylesheet" />'
+extra_head: '
+<link href="/css/article.css" rel="stylesheet" />'
 ---
 <header class="sticky-header shadow-sm d-flex align-items-center justify-content-between">
   <a href="/" class="text-decoration-none fw-bold ms-3">
     <i class="fa fa-home"></i> Home
   </a>
-
   <div class="text-center flex-grow-1">
     <h1 class="mb-1">{{ page.title }}</h1>
   </div>
+  <h1 class="mb-1">
+    <a href="/rssfeed.xml" target="_blank" rel="noopener" class="m-3">
+      <i class="fa-solid fa-rss" title="Subscribe to RSS feed"></i>
+    </a>
+  </h1>
 </header>
 
 <footer>
@@ -21,7 +26,7 @@ extra_head: '<link href="/css/article.css" rel="stylesheet" />'
 
 <hr />
 
-<article> 
+<article>
   <strong><i class="fa fa-lightbulb"></i> TLDR:</strong> {{ page.description }}
 </article>
 
@@ -34,19 +39,19 @@ extra_head: '<link href="/css/article.css" rel="stylesheet" />'
   <h2>Participate!</h2>
   <p>Question, comments, suggestions, constructive criticism ? <a href="https://x.com/ErnestEnki" target="_blank">Reach
       out to me</a></p>
-    </footer>    
-  <hr />
-  <footer>
-  <p>© 2025 Ernest Enki. This page content is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License (CC BY 4.0)</a>.<br/>
-    You may copy, share, remix, and use this content for any purpose, including commercial use, as long as you provide proper attribution by including a hyperlink to the original source (<a href="{{ site.url }}{{ page.url }}">{{ site.url }}{{ page.url }}</a>).    
-    </p>
-  </footer>
-  <hr />
+</footer>
+<hr />
+<footer>
+  <p>© 2025 Ernest Enki. This page content is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License (CC BY 4.0)</a>.<br />
+    You may copy, share, remix, and use this content for any purpose, including commercial use, as long as you provide proper attribution by including a hyperlink to the original source (<a href="{{ site.url }}{{ page.url }}">{{ site.url }}{{ page.url }}</a>).
+  </p>
+</footer>
+<hr />
 <footer class="d-flex flex-wrap align-items-start gap-3 p-3">
   <img src="/books/patent_dystopia/images/cover.webp" alt="Book Cover" />
   <div>
-  If you enjoyed this article, you might also enjoy my book <a href="/books/patent_dystopia/landing2" target="_blank"><strong>Patent
-      Dystopia</strong>: How the Patent System Strangled Innovation, Job Creation, and the Economy.</a>
-    </div>
+    If you enjoyed this article, you might also enjoy my book <a href="/books/patent_dystopia/landing2" target="_blank"><strong>Patent
+        Dystopia</strong>: How the Patent System Strangled Innovation, Job Creation, and the Economy.</a>
+  </div>
 </footer>
 <hr />
