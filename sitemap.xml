@@ -7,7 +7,7 @@ layout: null
   <loc>{{ site.url }}</loc>
   <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>1</priority>
+  <priority>1.0</priority>
 </url>
 
 {% assign filtered_articles = site.articles | where_exp: "article", "article.draft != true" %}
@@ -16,7 +16,7 @@ layout: null
     <loc>{{ site.url }}{{ article.url }}</loc>
     <lastmod>{{ article.date | date_to_xmlschema }}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1</priority>
+    <priority>1.0</priority>
   </url>
 {% endfor %}
 
