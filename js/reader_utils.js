@@ -109,9 +109,13 @@ function CalculateReadingTime() {
   var el = document.getElementById("readingTime");
   if(!el) return;
 
-  const text = document.querySelector('main').innerText;
+  const articles = document.querySelectorAll('main article:not(.optional)');
   const wpm = 225;
-  const words = text.trim().split(/\s+/).length;
+  let words = 0;
+  articles.forEach(a => {
+    const t = a.innerText.trim();
+    if (t) words += t.split(/\s+/).length;
+  });
   const time = Math.ceil(words / wpm);
   el.innerText = time;
 }
