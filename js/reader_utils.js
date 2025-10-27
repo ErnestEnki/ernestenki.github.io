@@ -110,8 +110,7 @@ function CalculateReadingTime() {
   var el = document.getElementById("readingTime");
   if(!el) return;
 
-  const articles = document.querySelectorAll('main article:not(.optional)');
-  
+  const articles = document.querySelectorAll('main article:not(.optional)');  
   let words = 0;
   articles.forEach(a => {
     const t = a.innerText.trim();
