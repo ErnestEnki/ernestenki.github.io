@@ -105,12 +105,13 @@ function CreateToolTipsForKeyConcepts() {
 
 }
 
+const wpm = 300;
 function CalculateReadingTime() {
   var el = document.getElementById("readingTime");
   if(!el) return;
 
   const articles = document.querySelectorAll('main article:not(.optional)');
-  const wpm = 225;
+  
   let words = 0;
   articles.forEach(a => {
     const t = a.innerText.trim();
