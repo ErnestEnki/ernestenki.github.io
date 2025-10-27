@@ -40,7 +40,7 @@ main {
   }
 
   table {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     th { text-align: center;}
     td, th { border: 1px solid black; padding: 5px;  }
   }
