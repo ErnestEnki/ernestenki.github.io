@@ -1,0 +1,93 @@
+---
+layout: default
+title: MentorGuild Contract List
+description: Example of a MentorGuilds Contract List
+NoReader: true
+---
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.css" />
+<script src="https://cdn.datatables.net/2.3.4/js/dataTables.js"></script>
+
+<main class="container">
+    <br />
+    <p>All contracts of MentorGuild <a href="https://mygovernment.com/mentorguilds/123454" onclick="event.preventDefault();">Girls Who Code (ID: 123454)</a>, as per legally mandatory open data requirements</p>
+
+    <style type="text/css">
+        #contract-summary tbody {
+            tr {
+                cursor: pointer;
+            }
+            tr:hover td {
+                background-color: rgba(67, 65, 65, 0.45);
+            }
+        }
+    </style>
+
+    <table class="table" id="contract-summary" aria-describedby="contract-summary">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Status</th>
+                <th scope="col">Income Percentage</th>
+                <th scope="col">Worked hours</th>
+                <th scope="col">Mentee Income to Date</th>
+                <th scope="col">Mentee Recent Income / h</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-id="5301">
+                <td>5313</td>
+                <td>Offered</td>
+                <td>4.2%</td>
+                <td>0h (0%)</td>
+                <td>USD $0</td>
+                <td>NA</td>
+            </tr>
+            <tr data-id="5301">
+                <td>5301</td>
+                <td>Active</td>
+                <td>3.7%</td>
+                <td>325.8h (17%)</td>
+                <td>USD $20,200</td>
+                <td>USD $100 / h</td>
+            </tr>
+            <tr data-id="5301">
+                <td>5292</td>
+                <td>Finished</td>
+                <td>6%</td>
+                <td>9,200h (100%)</td>
+                <td>USD $500,000</td>
+                <td>USD $85 / h</td>
+            </tr>
+            <tr data-id="5301">
+                <td>5207</td>
+                <td>Terminated</td>
+                <td>6%</td>
+                <td>4,200h (50%)</td>
+                <td>USD $250,000</td>
+                <td>USD $60 / h</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+<script>
+    new DataTable('#contract-summary');
+
+    // delegated click and keyboard (Enter) navigation to contracts/ID
+    (function ($) {
+        function navigateRow($tr) {
+            var id = $tr.data('id');
+            if (!id) return;
+            window.location.href = window.location.href + encodeURIComponent(id);
+        }
+
+        // clicks on rows
+        $('#contract-summary').on('click', 'tbody tr', function (e) {
+            // allow clicks on links or form controls inside row to work normally
+            var $target = $(e.target);
+            if ($target.is('a, button, input, select, textarea')) return;
+            navigateRow($(this));
+        });
+    })(jQuery);
+</script>

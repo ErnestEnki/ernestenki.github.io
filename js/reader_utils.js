@@ -35,7 +35,8 @@ function SetupCustomizeReaderExperience() {
         </div>
       </div>`;
 
-  document.write(readerExpModal);
+  // append modal to the document without using document.write
+  document.body.insertAdjacentHTML('beforeend', readerExpModal);
 
   const contentStyle = document.getElementsByTagName('main')[0].style;
 

@@ -19,7 +19,7 @@
   
   <meta property="og:title" content="{{ page.title  | strip_html }}" />
   <meta property="og:description" content="{{ page.description | strip_html }}" />
-  <meta property="og:image" content="https://ernestenki.github.io/{{ page.image | default: "img/logo_socials.png" }}" />
+  <meta property="og:image" content="https://ernestenki.github.io/{{ page.image | default: "/img/logo_socials.png" }}" />
   {{ layout.extra_head }}
   {{ page.extra_head }}
 
@@ -39,7 +39,9 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/anchor-js/anchor.min.js" crossorigin="anonymous"></script>
-  <script src="/js/reader_utils.js"></script>
+  {% unless page.NoReader %}
+    <script src="/js/reader_utils.js"></script>
+  {% endunless %}
 
   {{ layout.extra_footer }}
   {{ page.extra_footer }}  
