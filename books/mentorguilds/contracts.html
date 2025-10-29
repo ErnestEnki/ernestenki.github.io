@@ -79,7 +79,7 @@ NoReader: true
         function navigateRow($tr) {
             var id = $tr.data('id');
             if (!id) return;
-            window.location.href = window.location.href + encodeURIComponent(id);
+            window.location.href = window.location.href + '/' + encodeURIComponent(id);
         }
 
         // clicks on rows
