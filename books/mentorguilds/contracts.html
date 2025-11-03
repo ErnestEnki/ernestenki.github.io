@@ -8,68 +8,102 @@ NoReader: true
 <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.css" />
 <script src="https://cdn.datatables.net/2.3.4/js/dataTables.js"></script>
     <style type="text/css">
-        #contract-summary tbody {
-            tr {
-                cursor: pointer;
-            }
+        table tbody tr {
+            cursor: pointer;
+        }
 
-            tr:hover td {
-                background-color: rgba(138, 135, 135, 0.45);
-            }
+        table tbody tr:hover td {
+            background-color: rgba(138, 135, 135, 0.45);
         }
     </style>
 
 <main class="container">
-    <br />
-    <p>All contracts of <a href="https://mygovernment.gov/mentorguilds/964219" onclick="event.preventDefault();">MentorGuild Girls Who Code (ID: 964219)</a>, as per <a href="https://mygovernment.gov/mentorguilds/laws" onclick="event.preventDefault();">MentorGuild laws</a>.</p>
+    {% include mentorguild_example_notice.html %}
+    <p><a href="https://mygovernment.gov/mentorguilds/964219" onclick="event.preventDefault();">MentorGuild Girls Who Code (ID: 964219)</a> mandatory Open Data as per <a href="https://mygovernment.gov/mentorguilds/laws" onclick="event.preventDefault();">MentorGuild laws</a></p>
     <p>Currency: USD$</p>
-
+    <h1>Contracts</h1>
     <table class="table" id="contract-summary" aria-describedby="contract-summary">
         <thead>
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Status</th>
                 <th scope="col">Income Percentage</th>
+                <th scope="col">Total Work hours</th>
                 <th scope="col">Worked hours</th>
-                <th scope="col">Mentee Income to Date</th>
-                <th scope="col">Mentee Recent Income / h</th>
             </tr>
         </thead>
         <tbody>
-            <tr data-id="5301">
-                <td>5313</td>
+            <tr>
+                <td><a href="5301">5313</a></td>
                 <td>Offered</td>
                 <td>4.2%</td>
-                <td>0h (0%)</td>
-                <td>$0</td>
-                <td>NA</td>
+                <td>0h</td>
+                <td>0%</td>
             </tr>
-            <tr data-id="5301">
-                <td>5301</td>
+            <tr>
+                <td><a href="5301">5303</a></td>
+                <td>Active</td>
+                <td>6%</td>
+                <td>13,000h</td>
+                <td>7.5%</td>
+            </tr>            
+            <tr>
+                <td><a href="5301">5302</a></td>
+                <td>Active</td>
+                <td>5.1%</td>
+                <td>8,100h</td>
+                <td>15.1%</td>
+            </tr>
+            <tr>
+                <td><a href="5301">5301</a></td>
                 <td>Active</td>
                 <td>3.7%</td>
-                <td>12,000h (10.4%)</td>
-                <td>$88,140</td>
-                <td>$100.3 / h</td>
+                <td>12,000h</td>
+                <td>10.4%</td>
             </tr>
-            <tr data-id="5301">
-                <td>5292</td>
+            <tr>
+                <td><a href="5301">5292</a></td>
                 <td>Finished</td>
                 <td>6%</td>
-                <td>9,200h (100%)</td>
-                <td>$525,120</td>
-                <td>$85.1 / h</td>
+                <td>9,200h</td>
+                <td>100%</td>
             </tr>
-            <tr data-id="5301">
-                <td>5207</td>
+            <tr>
+                <td><a href="5301">5207</a></td>
                 <td>Terminated</td>
                 <td>6%</td>
-                <td>4,200h (50%)</td>
-                <td>$256,980</td>
-                <td>$60.9 / h</td>
+                <td>4,200h</td>
+                <td>50%</td>
             </tr>
         </tbody>
     </table>
+
+    <h1>Latest performance statistics</h1>
+    <table class="table" id="groups-summary">
+        <thead>        
+            <tr>
+                <th scope="col">Cohort</th>
+                <th scope="col">Mentee Income/h (after tax)</th>
+                <th scope="col">Mentee Worked hours/w</th>
+                <th scope="col">MentorGuild Income/mentee</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="../cohort_performance/2024Q1">2024Q2</a></td>
+                <td>$100.3/h</td>
+                <td>41 h/w</td>                
+                <td>$3,590</td>
+            </tr>
+            <tr>
+                <td><a href="../cohort_performance/2024Q1">2024Q1</a></td>
+                <td>$85.1/h</td>
+                <td>32.7 h/w</td>
+                <td>$34,270</td>
+            </tr>
+        </tbody>
+    </table>
+    
 </main>
 
 <script>
@@ -77,20 +111,19 @@ NoReader: true
         order: [[0, 'desc']]
     });
 
-    // delegated click and keyboard (Enter) navigation to contracts/ID
-    (function ($) {
-        function navigateRow($tr) {
-            var id = $tr.data('id');
-            if (!id) return;
-            window.location.href = window.location.href + '/' + encodeURIComponent(id);
-        }
+    new DataTable('#groups-summary', {
+        order: [[0, 'desc']]
+    });    
 
+    (function ($) {
         // clicks on rows
-        $('#contract-summary').on('click', 'tbody tr', function (e) {
-            // allow clicks on links or form controls inside row to work normally
-            var $target = $(e.target);
-            if ($target.is('a, button, input, select, textarea')) return;
-            navigateRow($(this));
+        $('table').on('click', 'tbody tr', function (e) {
+            var $row = $(this);
+            var $a = $row.find('a').first();
+            var href = $a.attr('href');
+            if (href) {
+                window.location.href = href;
+            }
         });
     })(jQuery);
 </script>
