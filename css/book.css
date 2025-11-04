@@ -41,8 +41,23 @@ main {
 
   table {
     margin-bottom: 20px;
-    th { text-align: center;}
-    td, th { border: 1px solid black; padding: 5px;  }
+
+    th {
+      text-align: center;
+    }
+
+    td,
+    th {
+      border: 1px solid black;
+      padding: 5px;
+    }
+
+    td>div {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: justify;
+      width: 50%;
+    }
   }
 }
 
@@ -71,9 +86,9 @@ ul#toc-list ul {
     /* Avoids trapping the touch scroll */
     height: auto;
 
-    aside.toc {        
-      display:none;
-    }    
+    aside.toc {
+      display: none;
+    }
   }
 
 
