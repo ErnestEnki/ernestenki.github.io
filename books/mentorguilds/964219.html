@@ -1,21 +1,24 @@
 ---
 layout: default
-title: MentorGuild Contract List
-description: Example of a MentorGuilds Contract List
+title: MentorGuild 964219 Open Data Home
+description: Example of a MentorGuild Open Data home page
 NoReader: true
 ---
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.css" />
 <script src="https://cdn.datatables.net/2.3.4/js/dataTables.js"></script>
-    <style type="text/css">
-        table tbody tr {
+<style type="text/css">
+    table tbody {
+        tr {
             cursor: pointer;
         }
 
-        table tbody tr:hover td {
+        tr:hover td {
             background-color: rgba(138, 135, 135, 0.45);
         }
-    </style>
+
+    }
+</style>
 
 <main class="container">
     {% include mentorguild_example_notice.html %}
@@ -29,81 +32,71 @@ NoReader: true
                 <th scope="col">Status</th>
                 <th scope="col">Income Percentage</th>
                 <th scope="col">Total Work hours</th>
-                <th scope="col">Worked hours</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><a href="5301">5313</a></td>
+                <td><a href="contracts/5301">5313</a></td>
                 <td>Offered</td>
                 <td>4.2%</td>
-                <td>0h</td>
-                <td>0%</td>
+                <td>11,500h</td>
             </tr>
             <tr>
-                <td><a href="5301">5303</a></td>
+                <td><a href="contracts/5301">5303</a></td>
                 <td>Active</td>
                 <td>6%</td>
                 <td>13,000h</td>
-                <td>7.5%</td>
-            </tr>            
+            </tr>
             <tr>
-                <td><a href="5301">5302</a></td>
+                <td><a href="contracts/5301">5302</a></td>
                 <td>Active</td>
                 <td>5.1%</td>
                 <td>8,100h</td>
-                <td>15.1%</td>
             </tr>
             <tr>
-                <td><a href="5301">5301</a></td>
+                <td><a href="contracts/5301">5301</a></td>
                 <td>Active</td>
                 <td>3.7%</td>
                 <td>12,000h</td>
-                <td>10.4%</td>
             </tr>
             <tr>
-                <td><a href="5301">5292</a></td>
+                <td><a href="contracts/5301">5292</a></td>
                 <td>Finished</td>
                 <td>6%</td>
                 <td>9,200h</td>
-                <td>100%</td>
             </tr>
             <tr>
-                <td><a href="5301">5207</a></td>
+                <td><a href="contracts/5301">5207</a></td>
                 <td>Terminated</td>
                 <td>6%</td>
                 <td>4,200h</td>
-                <td>50%</td>
             </tr>
         </tbody>
     </table>
 
-    <h1>Latest performance statistics</h1>
+    <h1>Latest Mentee Work Performance</h1>
     <table class="table" id="groups-summary">
-        <thead>        
+        <thead>
             <tr>
                 <th scope="col">Cohort</th>
-                <th scope="col">Mentee Income/h (after tax)</th>
-                <th scope="col">Mentee Worked hours/w</th>
-                <th scope="col">MentorGuild Income/mentee</th>
+                <th scope="col">Mean Income/h (after tax)</th>
+                <th scope="col">Mean Worked Hours/w</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><a href="../cohort_performance/2024Q1">2024Q2</a></td>
-                <td>$100.3/h</td>
-                <td>41 h/w</td>                
-                <td>$3,590</td>
+                <td><a href="cohort_performance/2024Q1">2024Q2</a></td>
+                <td>$100.3</td>
+                <td>41</td>
             </tr>
             <tr>
-                <td><a href="../cohort_performance/2024Q1">2024Q1</a></td>
-                <td>$85.1/h</td>
-                <td>32.7 h/w</td>
-                <td>$34,270</td>
+                <td><a href="cohort_performance/2024Q1">2024Q1</a></td>
+                <td>$85.1</td>
+                <td>32.7</td>
             </tr>
         </tbody>
     </table>
-    
+
 </main>
 
 <script>
@@ -113,7 +106,7 @@ NoReader: true
 
     new DataTable('#groups-summary', {
         order: [[0, 'desc']]
-    });    
+    });
 
     (function ($) {
         // clicks on rows
