@@ -52,6 +52,10 @@ main {
       padding: 5px;
     }
 
+    ul {
+      padding-left: 1em;
+    }
+
     td>div {
       margin-left: auto;
       margin-right: auto;
