@@ -7,9 +7,12 @@ description: Example of a MentorGuild contract open data
 <style type="text/css">
     table {
         margin: 30px 0;
-
         border: 1px solid #050505;
     }
+
+    table.bordered {
+            border: 2px solid #000;
+        }
 </style>
 
 <main class="container">
@@ -37,14 +40,29 @@ description: Example of a MentorGuild contract open data
                 <th>Status</th>
                 <td>Active</td>
             </tr>
+            </tbody>
+        </table>
+
+    <table class="table bordered">
+        <tbody>        
             <tr>
-                <th>Income %</th>
+                <th class="text-center align-middle" colspan="2">Repayment Factors</th>
+            </tr>             
+            <tr>
+                <th width="300">Income %</th>
                 <td>3.7%</td>
             </tr>
             <tr>
-                <th>Worked Hours</th>
+                <th>Work Hours</th>
                 <td>12,000h</td>
             </tr>
+            <tr>
+                <th>Income Floor</th>
+                <td>$3,400/m</td>
+            </tr>            
+            <tr>
+                <th class="text-center align-middle" colspan="2">Other Financials</th>
+            </tr>               
             <tr>
                 <th>Include Content Creator Income</th>
                 <td>No</td>
@@ -60,7 +78,13 @@ description: Example of a MentorGuild contract open data
                     <li>$600/m for 24 months from 2024-08</li>
                 </ul>
             </td>
-            </tr>
+            </tr>            
+        </tbody>        
+    </table>
+
+    <table class="table">
+        <tbody>    
+
             <tr>
                 <th>Resources and Services Provided</th>
                 <td>
