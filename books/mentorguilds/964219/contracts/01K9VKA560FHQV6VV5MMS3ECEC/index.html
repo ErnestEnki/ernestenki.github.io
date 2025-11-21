@@ -4,6 +4,8 @@ title: MentorGuild 964219 Contract 01K9VKA560FHQV6VV5MMS3ECEC
 description: Example of a MentorGuild contract open data
 ---
 
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 <style type="text/css">
     table {
         margin: 30px 0;
@@ -11,12 +13,12 @@ description: Example of a MentorGuild contract open data
     }
 
     table.bordered {
-            border: 2px solid #000;
-        }
+        border: 2px solid #000;
+    }
 </style>
 
 <main class="container">
-     {% include mentorguild_example_notice.html %}
+    {% include mentorguild_example_notice.html %}
 
     <h1>Contract</h1>
     <table class="table">
@@ -24,7 +26,7 @@ description: Example of a MentorGuild contract open data
             <tr>
                 <th>MentorGuild</th>
                 <td>
-                    <a href="/books/mentorguilds/964219">Girls Who Code (ID: 964219)</a> 
+                    <a href="/books/mentorguilds/964219">Girls Who Code (ID: 964219)</a>
                     <a href="https://mygovernment.gov/mentorguilds/laws" onclick="event.preventDefault();"><small>* MentorGuild laws and guidance</small></a>
                 </td>
             </tr>
@@ -35,19 +37,19 @@ description: Example of a MentorGuild contract open data
             <tr>
                 <th>Cohort</th>
                 <td><a href="../../cohort_performance/2024Q1">2024Q1</a></td>
-            </tr>            
+            </tr>
             <tr>
                 <th>Status</th>
                 <td>Active</td>
             </tr>
-            </tbody>
-        </table>
+        </tbody>
+    </table>
 
     <table class="table bordered">
-        <tbody>        
+        <tbody>
             <tr>
                 <th class="text-center align-middle" colspan="2">Repayment Factors</th>
-            </tr>             
+            </tr>
             <tr>
                 <th width="300">Income %</th>
                 <td>3.7%</td>
@@ -59,32 +61,33 @@ description: Example of a MentorGuild contract open data
             <tr>
                 <th>Income Floor</th>
                 <td>$3,400/m</td>
-            </tr>            
-            <tr>
-                <th class="text-center align-middle" colspan="2">Other Financials</th>
-            </tr>               
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table">
+        <tbody>
             <tr>
                 <th>Include Content Creator Income</th>
                 <td>No</td>
-            </tr>           
+            </tr>
             <tr>
                 <th>Tuition</th>
                 <td>$0</td>
             </tr>
             <tr>
                 <th>Stipend</th>
-                <td><ul>
-                    <li>$400/m for 3 months from sign date</li>
-                    <li>$600/m for 24 months from 2024-08</li>
-                </ul>
-            </td>
-            </tr>            
-        </tbody>        
-    </table>
-
-    <table class="table">
-        <tbody>    
-
+                <td>
+                    <ul>
+                        <li>$400/m for 3 months from sign date</li>
+                        <li>$600/m for 24 months from 2024-08</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>Expiry date</th>
+                <td>2036-11-16</td>
+            </tr>
             <tr>
                 <th>Resources and Services Provided</th>
                 <td>
@@ -95,10 +98,10 @@ description: Example of a MentorGuild contract open data
                         <li>Access to an employment lawyer for contract review and general work-related legal questions.</li>
                         <li>External courses provided:
                             <ul>
-                                <li><a href="http://www.somewebsite.com/courses/coding"  onclick="event.preventDefault();">Introduction to Programming</a></li>
-                                <li><a href="http://www.anotherwebsite.com/frontend"  onclick="event.preventDefault();">Front-End Development</a></li>
-                                <li><a href="http://www.anotherwebsite.com/backend"  onclick="event.preventDefault();">Back-End Development</a></li>
-                                <li><a href="http://www.cookinghealthynow.com"  onclick="event.preventDefault();">Healthy Cooking and Nutrition</a></li>
+                                <li><a href="http://www.somewebsite.com/courses/coding" onclick="event.preventDefault();">Introduction to Programming</a></li>
+                                <li><a href="http://www.anotherwebsite.com/frontend" onclick="event.preventDefault();">Front-End Development</a></li>
+                                <li><a href="http://www.anotherwebsite.com/backend" onclick="event.preventDefault();">Back-End Development</a></li>
+                                <li><a href="http://www.cookinghealthynow.com" onclick="event.preventDefault();">Healthy Cooking and Nutrition</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -130,13 +133,13 @@ description: Example of a MentorGuild contract open data
                         <li>Job Interview Preparation and Résumé Writing</li>
                     </ul>
                 </td>
-            </tr>     
+            </tr>
             <tr>
                 <th class="text-center align-middle" colspan="2">Job Matching Factors <a href="https://mygovernment.gov/mentorguilds/job_matching" onclick="event.preventDefault();"><i class="fa-regular fa-circle-question"></i></a></th>
-            </tr>              
+            </tr>
             <tr>
                 <th>Specialized skills
-                    <br/>
+                    <br />
                     (primary factor)
                 </th>
                 <td>
@@ -152,11 +155,11 @@ description: Example of a MentorGuild contract open data
                         <li>Building and Publishing Projects (web apps, portfolios, etc.)</li>
                     </ul>
                 </td>
-            </tr>   
+            </tr>
             <tr>
-                <th>Job Titles and 
+                <th>Job Titles and
                     Standard Occupational Codes <a href="https://www.bls.gov/soc/2018/major_groups.htm" target="_blank"><i class="fa-regular fa-circle-question"></i></a>
-                    <br/>
+                    <br />
                     (secondary factor)
                 </th>
                 <td>
@@ -165,7 +168,7 @@ description: Example of a MentorGuild contract open data
                         <li>15-1250 Series (Software Developers, Programmers, and Testers)</li>
                     </ul>
                 </td>
-            </tr>                            
+            </tr>
         </tbody>
     </table>
 
@@ -181,9 +184,9 @@ description: Example of a MentorGuild contract open data
                 <th>MentorGuild</th>
                 <td>2024-10: Mentee is showing great promise, even got a raise after a few months! Unfortunately, their first job was unreliable and failed to pay them. We quickly identified the issue and supported them in securing a better position.
                 </td>
-            </tr>            
+            </tr>
         </tbody>
-    </table>    
+    </table>
 
     <h1>Legal changes to contract</h1>
     <table class="table">
@@ -200,5 +203,4 @@ description: Example of a MentorGuild contract open data
             </tr>
         </tbody>
     </table>
-
 </main>
