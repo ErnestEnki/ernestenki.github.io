@@ -101,7 +101,7 @@ NoReader: true
     </table>
 
     <h1>Latest Mentee Work Performance</h1>
-    <table class="table" id="groups-summary">
+    <table class="table" id="cohort-summary">
         <thead>
             <tr>
                 <th scope="col">Cohort</th>
@@ -126,6 +126,35 @@ NoReader: true
         </tbody>
     </table>
 
+    <h1>MentorGuild Revenue</h1>
+    <table class="table" id="financials-summary">
+        <thead>
+            <tr>
+                <th scope="col">Period</th>
+                <th scope="col">Mentee's income</th>
+                <th scope="col">Tuition</th>
+                <th scope="col">Capital Gains</th>
+                <th scope="col">Interest/Dividends</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2026-01</td>
+                <td>78%</td>
+                <td>7%</td>
+                <td>10%</td>
+                <td>5%</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row" colspan="5"><a href="financials">more financial information</a></th>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
 </main>
 
 <script>
@@ -133,7 +162,7 @@ NoReader: true
         order: [[0, 'desc']]
     });
 
-    new DataTable('#groups-summary', {
+    new DataTable('#cohort-summary', {
         order: [[0, 'desc']]
     });
 

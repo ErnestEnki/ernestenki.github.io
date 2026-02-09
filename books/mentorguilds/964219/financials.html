@@ -1,0 +1,185 @@
+---
+layout: default
+title: MentorGuild 964219 Financials
+description: Example of a MentorGuild Financials Page
+---
+<style type="text/css">
+    table.interactive {
+
+        tbody tr:hover td {
+            background-color: rgba(138, 135, 135, 0.45);
+        }
+
+    }
+</style>
+
+<main class="container">
+    {% include mentorguild_example_notice.html %}
+
+    <h1>Financials:</h1>
+    <table class="table">
+        <tr>
+            <th>MentorGuild</th>
+            <td>
+                <a href="/books/mentorguilds/964219">Girls Who Code (ID: 964219)</a>
+                <a href="https://mygovernment.gov/mentorguilds/laws" onclick="event.preventDefault();"><small>* MentorGuild laws and guidance</small></a>
+            </td>
+        </tr>
+    </table>
+
+    <h1>Current Assets:</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Asset category</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cash &amp; cash equivalents</td>
+                <td>12%</td>
+            </tr>
+            <tr>
+                <td>Short-duration investment-grade bonds</td>
+                <td>20%</td>
+            </tr>
+            <tr>
+                <td>Long-duration bonds</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>Broad equity indices (passive)</td>
+                <td>38%</td>
+            </tr>
+            <tr>
+                <td>Single-company equities</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>Commodities (including gold)</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>MentorGuild cross-holdings</td>
+                <td>
+                    <ul>
+                        <li>8% - <a href="https://mygovernment.gov/mentorguilds/3157453" onclick="event.preventDefault();">MentorGuild Services to Sales (ID: 3157453)</a></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Related-party holdings</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>Private or illiquid assets</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>Derivatives or leveraged instruments</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td><strong>100%</strong></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Last Updated</th>
+                <td>2026-02-10</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h1>Revenue History:</h1>
+
+    <table class="table interactive" id="revenue-summary">
+        <thead>
+            <tr>
+                <th scope="col">Period</th>
+                <th scope="col">Mentee's income</th>
+                <th scope="col">Tuition</th>
+                <th scope="col">Realized Capital Gains</th>
+                <th scope="col">Interest/Dividends</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2026-01</td>
+                <td>78%</td>
+                <td>7%</td>
+                <td>10%</td>
+                <td>5%</td>
+            </tr>
+            <tr>
+                <td>2025-12</td>
+                <td>82%</td>
+                <td>8%</td>
+                <td>5%</td>
+                <td>5%</td>
+            </tr>
+            <tr>
+                <td>2025-11</td>
+                <td>83%</td>
+                <td>7%</td>
+                <td>4%</td>
+                <td>6%</td>
+            </tr>
+            <tr>
+                <td>2025-10</td>
+                <td>87%</td>
+                <td>6%</td>
+                <td>0%</td>
+                <td>7%</td>
+            </tr>
+            <tr>
+                <td>2025-09</td>
+                <td>88%</td>
+                <td>7%</td>
+                <td>0%</td>
+                <td>5%</td>
+            </tr>
+            <tr>
+                <td>2025-08</td>
+                <td>87%</td>
+                <td>6%</td>
+                <td>1%</td>
+                <td>6%</td>
+            </tr>
+            <tr>
+                <td>2025-07</td>
+                <td>84%</td>
+                <td>8%</td>
+                <td>3%</td>
+                <td>5%</td>
+            </tr>
+            <tr>
+                <td>2025-06</td>
+                <td>84%</td>
+                <td>7%</td>
+                <td>4%</td>
+                <td>5%</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td scope="row" colspan="5">Last Updated: 2026-02-02</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h1>Disclaimers:</h1>
+    <div>
+        <p>This data is published under the following conditions:</p>
+
+        <ul>
+            <li><strong>Fixed publication delay:</strong> Current asset data is published with a three-month delay, and revenue data with a two-week delay, to allow for accurate reconciliation and to reduce security, coercion, and competitive risks.</li>
+            <li><strong>Granular, non-aggregated disclosure:</strong> The data is published at a high level of granularity and without built-in aggregation or signaling. Interpretation, comparison, and synthesis are encouraged by independent observers.</li>
+            <li><strong>Designed for independent analysis:</strong> The published data supports independent estimation of financial resilience metrics, including drawdowns, liquidity under stress, runway scenarios, and correlations between MentorGuild finances and mentee outcomes during economic downturns. Estimates will vary based on assumptions, and reasonable disagreement is expected.</li>
+            <li><strong>No single-metric reliance:</strong> No single metric should be treated as authoritative. Patterns observed across time and across multiple indicators are more meaningful than point-in-time values.</li>
+        </ul>
+    </div>
+
+</main>
