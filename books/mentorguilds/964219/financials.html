@@ -11,6 +11,10 @@ description: Example of a MentorGuild Financials Page
         }
 
     }
+
+    tfoot  {
+        font-size: smaller;
+    }
 </style>
 
 <main class="container">
@@ -28,58 +32,54 @@ description: Example of a MentorGuild Financials Page
     </table>
 
     <h1>Current Assets:</h1>
-    <table class="table">
+    <table class="table interactive">
         <thead>
             <tr>
-                <th>Asset category</th>
+                <th>Asset</th>
                 <th>Percentage</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Cash &amp; cash equivalents</td>
+                <td><a href="https://www.someissuer.com/IX/sp500" onclick="event.preventDefault();">S&P 500 Index</a></td>
+                <td>18%</td>
+            </tr>            
+            <tr>
+                <td><a href="https://www.examplebank.com/deposits/productA" onclick="event.preventDefault();">Cash</a></td>
+                <td>11.5%</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.someissuer.com/ETFs/us_treasury" onclick="event.preventDefault();">US Treasury ETF</a></td>
+                <td>14%</td>
+            </tr>
+            <tr>
+                <td><a href="https://www.someissuer.com/ETFs/msci_world_ex_us" onclick="event.preventDefault();">MSCI World ex-US ETF</a></td>
                 <td>12%</td>
+            </tr>            
+            <tr>
+                <td><a href="https://www.someissuer.com/ETFs/eu_sovereign_bonds" onclick="event.preventDefault();">EU Sovereign Bond ETF</a></td>
+                <td>9.5%</td>
             </tr>
             <tr>
-                <td>Short-duration investment-grade bonds</td>
-                <td>20%</td>
+                <td><a href="https://www.someissuer.com/ETFs/global_aggregate_bond" onclick="event.preventDefault();">Global Aggregate Bond ETF</a></td>
+                <td>7.5%</td>
             </tr>
             <tr>
-                <td>Long-duration bonds</td>
-                <td>0%</td>
+                <td><a href="https://www.someissuer.com/IX/nasdaq100" onclick="event.preventDefault();">NASDAQ-100 Index</a></td>
+                <td>8.5%</td>
             </tr>
             <tr>
-                <td>Broad equity indices (passive)</td>
-                <td>38%</td>
+                <td><a href="https://www.someissuer.com/ETFs/physical_gold" onclick="event.preventDefault();">Physical Gold ETF</a></td>
+                <td>7%</td>
             </tr>
             <tr>
-                <td>Single-company equities</td>
-                <td>0%</td>
+                <td><a href="https://mygovernment.gov/mentorguilds/3157453" onclick="event.preventDefault();">MentorGuild Services to Sales (ID: 3157453)</a></td>
+                <td>6%</td>
             </tr>
             <tr>
-                <td>Commodities (including gold)</td>
-                <td>10%</td>
-            </tr>
-            <tr>
-                <td>MentorGuild cross-holdings</td>
-                <td>
-                    <ul>
-                        <li>8% - <a href="https://mygovernment.gov/mentorguilds/3157453" onclick="event.preventDefault();">MentorGuild Services to Sales (ID: 3157453)</a></li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>Related-party holdings</td>
-                <td>0%</td>
-            </tr>
-            <tr>
-                <td>Private or illiquid assets</td>
-                <td>0%</td>
-            </tr>
-            <tr>
-                <td>Derivatives or leveraged instruments</td>
-                <td>0%</td>
-            </tr>
+                <td>Others (assets less then 5% of total)</td>
+                <td>2.9%</td>
+            </tr>            
             <tr>
                 <td><strong>Total</strong></td>
                 <td><strong>100%</strong></td>
@@ -87,22 +87,21 @@ description: Example of a MentorGuild Financials Page
         </tbody>
         <tfoot>
             <tr>
-                <th>Last Updated</th>
-                <td>2026-02-10</td>
+                <td colspan="2">Assets Last Updated: 2026-02-10</td>
             </tr>
         </tfoot>
     </table>
 
     <h1>Revenue History:</h1>
 
-    <table class="table interactive" id="revenue-summary">
+    <table class="table interactive">
         <thead>
             <tr>
                 <th scope="col">Period</th>
                 <th scope="col">Mentee's income</th>
                 <th scope="col">Tuition</th>
                 <th scope="col">Realized Capital Gains</th>
-                <th scope="col">Interest/Dividends</th>
+                <th scope="col">Investment Income</th>
             </tr>
         </thead>
         <tbody>
@@ -165,21 +164,23 @@ description: Example of a MentorGuild Financials Page
         </tbody>
         <tfoot>
             <tr>
-                <td scope="row" colspan="5">Last Updated: 2026-02-02</td>
+                <td scope="row" colspan="5">Revenues Last Updated: 2026-02-02</td>
             </tr>
+            <tr>
+                <td scope="row" colspan="5">
+                    <strong>Realized Capital Gains:</strong>  Profits resulting from the sale of assets or the closing of positions.<br/>
+                    <strong>Investment income:</strong> Cash flows not requiring asset sales, including interest, dividends, securities lending fees, rebates, and realized currency gains.
+                </td>
+            </tr>            
         </tfoot>
     </table>
 
     <h1>Disclaimers:</h1>
     <div>
-        <p>This data is published under the following conditions:</p>
+        <p>Financial data is published with fixed delays and without built-in aggregation.</p>
 
-        <ul>
-            <li><strong>Fixed publication delay:</strong> Current asset data is published with a three-month delay, and revenue data with a two-week delay, to allow for accurate reconciliation and to reduce security, coercion, and competitive risks.</li>
-            <li><strong>Granular, non-aggregated disclosure:</strong> The data is published at a high level of granularity and without built-in aggregation or signaling. Interpretation, comparison, and synthesis are encouraged by independent observers.</li>
-            <li><strong>Designed for independent analysis:</strong> The published data supports independent estimation of financial resilience metrics, including drawdowns, liquidity under stress, runway scenarios, and correlations between MentorGuild finances and mentee outcomes during economic downturns. Estimates will vary based on assumptions, and reasonable disagreement is expected.</li>
-            <li><strong>No single-metric reliance:</strong> No single metric should be treated as authoritative. Patterns observed across time and across multiple indicators are more meaningful than point-in-time values.</li>
-        </ul>
+        <p>Further disclosures apply. Please refer to <a href="https://mygovernment.gov/mentorguilds/open-data#financials">canonical MentorGuild open-data disclosures here</a>.</p>
+
     </div>
 
 </main>
