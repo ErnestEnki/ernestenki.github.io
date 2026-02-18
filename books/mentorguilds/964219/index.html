@@ -2,7 +2,6 @@
 layout: default
 title: MentorGuild 964219 Open Data Home
 description: Example of a MentorGuild Open Data home page
-NoReader: true
 ---
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <link rel="stylesheet" href="https://cdn.datatables.net/2.3.4/css/dataTables.dataTables.css" />
@@ -31,7 +30,9 @@ NoReader: true
 <main class="container">
     {% include mentorguild_example_notice.html %}
     <p><a href="https://mygovernment.gov/mentorguilds/964219" onclick="event.preventDefault();">MentorGuild Girls Who Code (ID: 964219)</a> mandatory Open Data as per <a href="https://mygovernment.gov/mentorguilds/laws" onclick="event.preventDefault();">MentorGuild laws</a></p>
-    <p>Currency: USD$</p>
+    <p>Currency: USD$; Status: Active; Jurisdiction: United States, California; Type: For-Profit</p>
+    <p>Website: <a href="www.mymentorguildname.com" onclick="event.preventDefault();">www.mymentorguildname.com</a></p>
+
     <h1>Contracts</h1>
     <table class="table" id="contract-summary" aria-describedby="contract-summary">
         <thead>
@@ -100,7 +101,7 @@ NoReader: true
         </tbody>
     </table>
 
-    <h1>Latest Mentee Work Performance</h1>
+    <h1>Cohorts</h1>
     <table class="table" id="cohort-summary">
         <thead>
             <tr>
@@ -126,7 +127,7 @@ NoReader: true
         </tbody>
     </table>
 
-    <h1>MentorGuild Revenue</h1>
+    <h1>Latest Revenue</h1>
     <table class="table" id="financials-summary">
         <thead>
             <tr>
@@ -154,6 +155,41 @@ NoReader: true
     </table>
 
 
+    <h1>Legal Cases</h1>
+    <table class="table noclick" id="legal-cases-summary">
+        <thead>
+            <tr>
+                <th scope="col">Latest Update</th>
+                <th scope="col">Case ID</th>
+                <th scope="col">Category</th>
+                <th scope="col">Status</th>
+                <th scope="col">Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2025-03-15</td>
+                <td><a href="https://mygovernment.gov/justice_department/cases/CA-2024-0023117" onclick="event.preventDefault();">CA-2025-0047892</a></td>
+                <td>Financial Reporting</td>
+                <td>Closed</td>
+                <td>Regulatory inquiry regarding revenue classification methodology. Independent review concluded reporting complied with disclosure standards. No Wrongdoing Found</td>
+            </tr>
+            <tr>
+                <td>2024-11-18</td>
+                <td><a href="https://mygovernment.gov/justice_department/cases/CA-2024-0023117" onclick="event.preventDefault();">CA-2024-0023117</a></td>
+                <td>Contract Dispute</td>
+                <td>Resolved</td>
+                <td>Former mentee challenged income reporting methodology. Matter resolved through independent mediation. No admission of liability.</td>
+            </tr>
+            <tr>
+                <td>2024-06-02</td>
+                <td><a href="https://mygovernment.gov/justice_department/cases/CA-2024-0011458" onclick="event.preventDefault();">CA-2024-0011458</a></td>
+                <td>Privacy</td>
+                <td>Closed</td>
+                <td>Complaint alleging inadvertent disclosure of limited mentee-identifying metadata on a public reporting page. Investigation determined the exposure presented low material risk and was promptly remediated. Internal data-handling protocols were revised, and all affected current mentees received $300 in compensation.</td>
+            </tr>
+        </tbody>
+    </table>
 
 </main>
 
@@ -168,7 +204,7 @@ NoReader: true
 
     (function ($) {
         // clicks on rows
-        $('table').on('click', 'tbody tr', function (e) {
+        $("table:not('.noclick')").on('click', 'tbody tr', function (e) {
             var $row = $(this);
             var $a = $row.find('a').first();
             var href = $a.attr('href');
